@@ -5,3 +5,11 @@ body,
 .main-content {
 	height: 100%;
 }
+
+/*Header*/
+
+header {
+	background: #F6F7EF;
+	padding: 5px 15px;
+	border-bottom: 10px solid #3A7E41;
+}
