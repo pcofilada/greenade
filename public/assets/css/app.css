@@ -6,6 +6,10 @@ body,
 	height: 100%;
 }
 
+.sidebar {
+	padding: 0;
+}
+
 /*Header*/
 
 header {
@@ -36,4 +40,27 @@ header .nav.nav-pills li:nth-child(4) a {
 li.divider {
 	padding: 10px 5px;
 	color: rgba(85, 85, 85, 0.41);
+}
+
+header a {
+	color: #397f43;
+}
+
+/*Date*/
+
+.date {
+	text-align: center;
+	background: #3A7D40;
+	color: #FFFFFF;
+}
+
+.date h4 {
+	margin: 0;
+	padding: 10px 0 0 0;
+	font-weight: bold;
+}
+
+.date h5 {
+	margin: 0;
+	padding: 5px 0 10px 0;
 }
