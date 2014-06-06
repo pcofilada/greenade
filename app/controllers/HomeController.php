@@ -26,7 +26,7 @@ class HomeController extends BaseController {
 	{
 		$rules 			= array(
 						'name' 		=> 'required',
-						'mobile' 	=> 'integer',
+						'mobile' 	=> 'min:11 | max:11',
 						'email' 		=> 'email | unique:users',
 						'password' 	=> 'required | confirmed'
 						);
@@ -45,6 +45,33 @@ class HomeController extends BaseController {
 
 			return "Save!";
 		}
+	}
 
+	public function doLogin()
+	{
+		$rules 				= array(
+							'email' => 'required',
+							'password' => 'required'
+							);
+
+		$validator 			= Validator::make(Input::all(),$rules);
+
+		if($validator->fails()){
+			return Redirect::to('/');
+		}else{
+			$userdata 		= array(
+							'email' 	=> Input::get('email'),
+							'password' 	=> Input::get('password')
+							);
+
+			$user 			= User::where('email', $userdata['email'])->first();
+			if($user && Hash::check($userdata['password'],$user->password)){
+				Session::put('user',$user);
+				return "You are now logged in!";
+			}else{
+				return "error";
+				dd(Session::all());
+			}
+		}
 	}
 }

@@ -87,9 +87,9 @@ return array(
 		    'driver'   => 'mongodb',
 		    'host'     => 'localhost',
 		    'port'     => 27017,
-		    'username' => 'username',
-		    'password' => 'password',
-		    'database' => 'database'
+		    'username' => '',
+		    'password' => '',
+		    'database' => 'greenade'
 		),
 
 	),
