@@ -87,6 +87,18 @@
           </div>
           <div class="modal-body">
             <form class="form-horizontal" role="form">
+               <div class="form-group">
+                 <label for="name" class="col-sm-2 control-label">Name</label>
+                 <div class="col-sm-10">
+                   <input type="text" class="form-control" id="name" placeholder="Name">
+                 </div>
+               </div>
+              <div class="form-group">
+                <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="mobile" placeholder="Mobile Number">
+                </div>
+              </div>
               <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-10">
@@ -102,7 +114,7 @@
               <div class="form-group">
                 <label for="confirm" class="col-sm-2 control-label">Confirm Password</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="confirm" placeholder="Password">
+                  <input type="password" class="form-control" id="confirm" placeholder="Confirm Password">
                 </div>
               </div>
               <div class="form-group">
