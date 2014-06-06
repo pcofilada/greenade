@@ -26,6 +26,7 @@
         <ul class="nav nav-pills">
           <li><a href="">How Can I Contribute</a></li>
           <li><a href="">SIGN UP</a></li>
+          <li class="divider">|</li>
           <li><a href="">LOG IN</a></li>
         </ul>
       </div>
