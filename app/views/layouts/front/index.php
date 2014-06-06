@@ -27,7 +27,7 @@
           <li><a href="">How Can I Contribute</a></li>
           <li><a href="">SIGN UP</a></li>
           <li class="divider">|</li>
-          <li><a href="">LOG IN</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
         </ul>
       </div>
     </header>
@@ -43,6 +43,27 @@
         <?php echo (isset($main) ? $main : null); ?>
       </div>
     </div>
+
+    <!-- Modals -->
+    <!-- Modal -->
+  <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h2 class="modal-title" id="login-modalLabel">GREENADE LOGIN</h2>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="LOGIN">
+          <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
