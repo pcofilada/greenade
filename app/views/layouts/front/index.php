@@ -25,9 +25,15 @@
       <div class="pull-right">
         <ul class="nav nav-pills">
           <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
-          <li class="divider">|</li>
-          <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
+          <?php if (Session::has('user')) {
+              $user = Session::get('user'); ?>
+              <li><a href="#">Welcome <?php echo $user->name; ?> !</a>
+              </li>
+          <?php }else{ ?>
+            <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
+            <li class="divider">|</li>
+            <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
+          <?php } ?>
         </ul>
       </div>
     </header>

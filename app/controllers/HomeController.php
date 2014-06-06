@@ -67,7 +67,7 @@ class HomeController extends BaseController {
 			$user 			= User::where('email', $userdata['email'])->first();
 			if($user && Hash::check($userdata['password'],$user->password)){
 				Session::put('user',$user);
-				return "You are now logged in!";
+				return Redirect::to('/');
 			}else{
 				return "error";
 				dd(Session::all());
