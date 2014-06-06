@@ -11,4 +11,5 @@
 |
 */
 
+Route::post('signup','HomeController@doSignup');
 Route::get('/', 'HomeController@home');
