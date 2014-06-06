@@ -1,4 +1,4 @@
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>
@@ -12,7 +12,7 @@
 		</div>
 	</div>
 </div>
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 </div>
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>
@@ -40,7 +40,7 @@
 		</div>
 	</div>
 </div>
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>
@@ -54,7 +54,7 @@
 		</div>
 	</div>
 </div>
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>
@@ -68,7 +68,7 @@
 		</div>
 	</div>
 </div>
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>
@@ -83,7 +83,7 @@
 	</div>
 </div>
 
-<div class="trending">
+<div class="trending clearfix">
 	<div class="image col-md-4">
 		<img src="/assets/images/trending.jpg" alt="" style="width: 100%; height: 70px; ">
 	</div>

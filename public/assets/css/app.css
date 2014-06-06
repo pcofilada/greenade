@@ -6,7 +6,8 @@ body,
 	height: 100%;
 }
 
-.sidebar {
+.sidebar,
+.main-content {
 	padding: 0;
 }
 
@@ -63,4 +64,30 @@ header a {
 .date h5 {
 	margin: 0;
 	padding: 5px 0 10px 0;
+}
+
+/*Trending*/
+
+.trending {
+	margin: 0 10px;
+	padding: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.trending img {
+	border-radius: 5px;
+	border: 1px solid #3B7F42;
+}
+
+.trending .info {
+	padding: 10px 0;
+}
+
+.trending .title {
+	margin: 0;
+	font-weight: bold;
+}
+
+.trending .location {
+	margin: 0;
 }
