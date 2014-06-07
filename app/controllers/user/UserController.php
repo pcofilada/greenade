@@ -14,10 +14,11 @@ class UserController extends BaseController {
 
 	public function reports($id)
 	{
-		$reports 			= Report::orderBy('created_at','DESC')->get();
-		$myreport 			= Report::where('user','=',$id);
-		$trending 			= Report::take(5)->get();
 		$user 				= Session::get('user');
+		$reports 			= Report::orderBy('created_at','DESC')->get();
+		$myreport 			= Report::where('user','=',$user->id)->get();
+		
+		$trending 			= Report::take(5)->get();
 		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user')->with('user',$user)->with('reports',$reports)->with('myreport',$myreport)->with('trending',$trending);
 		$this->layout->main 		= View::make('front.index')->with('user',$user)->with('reports',$reports);
 	}
