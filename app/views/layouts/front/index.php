@@ -253,13 +253,19 @@
                        <input type="text" class="form-control hidden" name="long" id="long" >
                        <input type="text" class="form-control hidden" name="lat" id="lat" >
                      </div>
-                   </div>
+                  </div>
+                    <div class="full-width" style="display:block;">
+                      <div id="map_modal" style="width: 800px; height: 300px;"></div>
+                    </div>
+                  </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <input type="submit" class="btn btn-primary" value="REPORT">
                       <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
                     </div>
                   </div>
+                  <br> 
+                  <br>
                 </form>
           </div>
         </div>
