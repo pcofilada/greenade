@@ -33,7 +33,7 @@
         <ul class="nav nav-pills">
           <?php if (Session::has('user')) {
               $user = Session::get('user'); ?>
-              <li><a href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report"><i class="fa fa-plus-square" ></i> Add Report</a></li>
+              <li><button href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report"><i class="fa fa-plus-square" ></i> Add Report</button></li>
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?>  <i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#" data-toggle="modal" data-target="#profile-modal">Profile</a></li>
@@ -41,10 +41,10 @@
               </ul>
               </li>
           <?php }else{ ?>
-            <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
+            <li><a href="" data-toggle="modal" data-target="#contribute-modal" class="btn btn-link">How Can I Contribute?</a></li>
+            <li><button href="#" data-toggle="modal" data-target="#signup-modal" class="btn btn-success">Sign Up</button></li>
             <li class="divider">|</li>
-            <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
+            <li><button href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button></li>
           <?php } ?>
         </ul>
       </div>
