@@ -1,6 +1,15 @@
 $(document).ready(function(){
 
-    $("html").niceScroll({cursorcolor:"#397F43"});
+	$("html").niceScroll({cursorcolor:"#397F43"});
+	
+	$('#newest').click(function(){
+		$('.trending').css({display:'none'});
+		$('.newest').css({display:'block'});
+	});
+	$('#trending').click(function(){
+		$('.trending').css({display:'block'});
+		$('.newest').css({display:'none'});
+	});
 
 	var sUrl = window.location.host;
 
