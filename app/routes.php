@@ -13,4 +13,8 @@
 
 Route::post('signup','HomeController@doSignup');
 Route::post('login','HomeController@doLogin');
+Route::get('logout', function(){
+	Session::flush();
+	return Redirect::to('/');
+});
 Route::get('/', 'HomeController@home');
