@@ -166,7 +166,7 @@
         </div>
       </div>
     </div>    
-    
+
     <?php }else{ ?>
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
           <div class="modal-dialog">
