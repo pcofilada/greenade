@@ -26,6 +26,7 @@
         <ul class="nav nav-pills">
           <?php if (Session::has('user')) {
               $user = Session::get('user'); ?>
+              <li><a href="" class="btn btn-default">Add Report</a></li>
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?> !</a>
               <ul class="dropdown-menu">
                 <li><a href="">My Reports</a></li>
