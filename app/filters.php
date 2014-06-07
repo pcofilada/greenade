@@ -54,6 +54,12 @@ Route::filter('auth.basic', function()
 	return Auth::basic();
 });
 
+Route::filter('admin',function(){
+	if(!Session::has('admin')){
+		return Redirect::to('/admin/login');
+	}
+});
+
 /*
 |--------------------------------------------------------------------------
 | Guest Filter

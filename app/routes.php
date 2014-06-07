@@ -11,10 +11,23 @@
 |
 */
 
+Route::group(array('prefix' => 'admin','before'=>'admin'), function()
+{
+	Route::get('/','AdminController@index');
+});
+
 Route::post('signup','HomeController@doSignup');
 Route::post('login','HomeController@doLogin');
 Route::get('logout', function(){
 	Session::flush();
 	return Redirect::to('/');
+});
+Route::get('admin/login',function(){
+	if(Session::has('admin')){
+		return Redirect::to('admin');
+	}else{
+		$action = 'showLogin'; 
+        		return App::make('AdminController')->$action();
+	}
 });
 Route::get('/', 'HomeController@home');
