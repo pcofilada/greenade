@@ -50,6 +50,14 @@
       <div class="sidebar col-md-3">
       <?php if (!Session::has('user')) { ?>
         <div class="date">
+            <ul class="nav nav-pills pull-right">
+              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Newest</a></li>
+                <li><a href="#">Trending</a></li>
+              </ul>
+              </li>
+            </ul>
           <h4>TRENDING REPORT</h4>
           <h5>June 7, 2014</h5>
         </div>

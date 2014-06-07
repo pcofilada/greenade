@@ -22,6 +22,14 @@ header {
 	border-bottom: 10px solid #3A7E41;
 }
 
+.sidebar .nav .open a {
+	background: none;
+}
+
+.sidebar i.fa.fa-bars {
+	color: #FFFFFF;
+}
+
 /*Navigation*/
 
 header .nav.nav-pills {
