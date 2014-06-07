@@ -51,7 +51,7 @@ class HomeController extends BaseController {
 			$user->password 	= Hash::make(Input::get('password'));
 			$user->save();
 
-			return "Save!";
+			return Redirect::to('/');
 		}
 	}
 
