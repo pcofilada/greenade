@@ -238,8 +238,8 @@
                   </div>
                   <div class="form-group">
                      <div class="col-sm-10">
-                       <input type="text" class="form-control" name="long" id="long" >
-                       <input type="text" class="form-control" name="lat" id="lat" >
+                       <input type="text" class="form-control hidden" name="long" id="long" >
+                       <input type="text" class="form-control hidden" name="lat" id="lat" >
                      </div>
                    </div>
                   <div class="form-group">
