@@ -33,7 +33,7 @@
         <ul class="nav nav-pills">
           <?php if (Session::has('user')) {
               $user = Session::get('user'); ?>
-              <li><button href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report"><i class="fa fa-plus-square" ></i> Add Report</button></li>
+              <li><a href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report"><i class="fa fa-plus-square" ></i> Add Report</a></li>
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?>  <i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#" data-toggle="modal" data-target="#profile-modal">Profile</a></li>
