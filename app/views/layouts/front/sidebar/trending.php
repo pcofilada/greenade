@@ -16,8 +16,8 @@
 			echo $address;
 			 ?></h5>
 			<div class="status">
-				<span><i class="fa fa-check-circle-o"></i> 30</span>
-				<span><i class="fa fa-times-circle-o"></i> 5</span>
+				<span><i class="fa fa-smile-o"></i> 30</span>
+				<span><i class="fa fa-frown-o"></i> 5</span>
 				<span><i class="fa fa-comments-o"></i> 92</span>
 			</div>
 		</div>
