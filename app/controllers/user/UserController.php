@@ -6,9 +6,10 @@ class UserController extends BaseController {
 
 	public function home($id)
 	{
+		$reports 			= Report::all();
 		$user 				=  User::where('id','=',$id);
 		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user');
-		$this->layout->main 		= View::make('front.index')->with('user',$user);
+		$this->layout->main 		= View::make('front.index')->with('user',$user)->with('reports',$reports);
 
 	}
 
