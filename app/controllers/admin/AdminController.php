@@ -5,7 +5,7 @@ class AdminController extends \BaseController {
 
 	public function index()
 	{
-		$this->layout->main 		= "Main";
+		$this->layout->main 		= View::make('admin.index');
 	}
 
 	public function showLogin()
