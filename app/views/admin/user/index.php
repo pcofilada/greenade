@@ -15,7 +15,7 @@
 					<td><?php echo $user->email; ?></td>
 					<td>
 						<div class="icons right">
-						<a href="#"><i class="fa fa-pencil-square-o"></i> Edit</a> |
+						<a href="/admin/users/<?php echo $user->id; ?>/edit"><i class="fa fa-pencil-square-o"></i> Edit</a> |
 				                       <form class="delete" action="" method="POST">
 							<i class="fa fa-trash-o"></i><input type="submit" value="Delete" />
 				                       </form>

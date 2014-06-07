@@ -57,7 +57,8 @@ class AdminUserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user 				= User::find($id);
+		$this->layout->main 		= View::make('admin.user.edit')->with('user',$user);
 	}
 
 

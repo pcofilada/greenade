@@ -32,8 +32,8 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" class="btn btn-primary" value="UPDATE">
-      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+      <input type="submit" class="btn btn-success" value="UPDATE">
+      <a href="/admin/users" class="btn btn-success">CANCEL</a>
     </div>
   </div>
 </form>
