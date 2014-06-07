@@ -31,8 +31,8 @@ class UserController extends BaseController {
 			return Redirect::to('/')->withErrors($validator)->withInput();
 		}else{
 			$image = array();
-			if(Input::hasFile('image[]') &&  $file = Input::file('image[]')){
-				foreach (Input::file('image[]') as $file) {
+			if(Input::hasFile('image') &&  $file = Input::file('image')){
+				foreach (Input::file('image') as $file) {
 					$filename 		= str_random(8) . '_' . $file->getClientOriginalName();
 					$destinationPath 	= public_path().'/reports/'.$session->name;
 					$upload_success 	= $file->move($destinationPath, $filename);
