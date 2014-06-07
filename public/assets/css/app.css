@@ -107,6 +107,32 @@ header a {
 	margin: 0;
 }
 
+/*Newest*/
+
+.newest.clearfix {
+	margin: 0 10px;
+	padding: 10px;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.newest img {
+	border-radius: 5px;
+	border: 1px solid #3B7F42;
+}
+
+.newest .info {
+	padding: 10px 0;
+}
+
+.newest .title {
+	margin: 0;
+	font-weight: bold;
+}
+
+.newest .location {
+	margin: 0;
+}
+
 /*Admin Login*/
 
 .login h3 {

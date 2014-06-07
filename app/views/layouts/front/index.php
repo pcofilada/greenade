@@ -53,8 +53,8 @@
             <ul class="nav nav-pills pull-right">
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Newest</a></li>
-                <li><a href="#">Trending</a></li>
+                <li><a href="#" id="newest">Newest</a></li>
+                <li><a href="#" id="trending">Trending</a></li>
               </ul>
               </li>
             </ul>
