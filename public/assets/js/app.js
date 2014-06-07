@@ -5,22 +5,34 @@ $(document).ready(function(){
 	  lat: -12.043333,
 	  lng: -77.028333,
 	  draggable: true
-	  /*,
-	  click: function(e){
-	  	var latLng = e.latLng;
-		var fLat = latLng.k;
-		var fLng = latLng.A;
-	  	initialize(latLng);
-	  },
-	  infoWindow: {
-		  content: '<p>form</p>'
-		}
-		*/
 	});
+
+
+  	var oMap = $('#map_data').val();
+  	obj = validate_json(oMap);
+  	
+  	if(typeof(obj) !='undefined'){
+	  	$.each(obj, function(index , value){
+	  		if(typeof(value.lat) !='undefined' || value.lat != "" || value.lat !=null &&
+	  			typeof(value.long) !='undefined' || value.long != "" || value.long !=null){
+	  			var iLat = value.lat;
+	  			var iLong = value.log;
+
+		  		map.addMarker({
+				  lat: iLat,
+				  lng: iLong,
+				  title: 'Lima',
+				  click: function(e) {
+				  }
+				});
+		  	}
+	  	});
+	}
+	
+  	
 
 //gmap events
 
-	var location;
 	var modal_map_global;
 
 	$('a.btn[data-target="#map_report"]').click(function(){
@@ -40,7 +52,6 @@ $(document).ready(function(){
 		  	var fLat = latLng.k
 		  	var fLng = latLng.A;
 		  	 modal_map_global= map_modal;
-		  	 //deleteMarkers()
 		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
 			$('#map_report').find('input[type="text"]#long').val(fLng);
 		  	initialize(latLng , modal_map_global);
@@ -49,9 +60,6 @@ $(document).ready(function(){
 		  	var latLng = e.latLng;
 		  	var fLat = latLng.k;
 		  	var fLng = latLng.A;
-
-		  	console.log(JSON.stringify(latLng));
-
 		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
 			$('#map_report').find('input[type="text"]#long').val(fLng);
 		  }
@@ -68,19 +76,33 @@ $(document).ready(function(){
 					lat: oData.k,
 					lng: oData.A,
 					draggable: true
-					/*,
-					click:function(){
-						
-						
-
-					},
-					infoWindow: {
-						content: "<p>TAPOS NA!</p>"
-					} */
 				});
 			}
 		}
     }
+
+    function validate_json(sData){
+
+		try{
+			if(sData.length > 2){
+			}
+		}
+		catch(e){
+			var sData = '{}';
+		}
+		oData = jQuery.parseJSON(sData);
+		try{
+			for(x in oData){
+				break;
+			}
+		}
+		catch(e){
+			oData = {};
+		}
+
+		return oData;	
+	}
+
 	initialize();
 
 });
