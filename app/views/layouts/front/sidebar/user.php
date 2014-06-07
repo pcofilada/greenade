@@ -1,5 +1,5 @@
 <ul class="nav nav-pills nav-stacked">
-	<li><a href=""><i class="fa fa-map-marker"></i> Map</a></li>
+	<li><a href="" class="active"><i class="fa fa-map-marker"></i> Map</a></li>
 	<li><a href=""><i class="fa fa-file-text-o"></i> Reports</a></li>
 	<li><a href=""><i class="fa fa-bar-chart-o"></i> Charts</a></li>
 	<li><a href=""><i class="fa fa-comment-o"></i> Notification</a></li>

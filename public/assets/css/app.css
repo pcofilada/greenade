@@ -156,3 +156,74 @@ header.user ul li .dropdown-menu a {
 header .nav .open>a {
 	background: none !important;
 }
+
+#main.user .sidebar .nav.nav-pills li a {
+	padding: 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+#main.user .sidebar li a .fa {
+	font-size: 25px;
+	padding: 10px 0;
+	border-right: 1px solid #eee;
+	width: 60px;
+	text-align: center;
+}
+
+.user .sidebar ul li {
+	margin: 0;
+}
+
+.user .sidebar i.fa.fa-map-marker {
+	border-left: 5px solid #FACE2A;
+}
+
+.user .sidebar i.fa.fa-file-text-o {
+	border-left: 5px solid #EC9D1E;
+}
+
+.user .sidebar i.fa.fa-bar-chart-o {
+	border-left: 5px solid #DB5343;
+}
+
+.user .sidebar i.fa.fa-comment-o {
+	border-left: 5px solid #E79EC6;
+}
+
+.user .sidebar i.fa.fa-envelope-o {
+	border-left: 5px solid #B9B8F2;
+}
+
+.user .sidebar i.fa.fa-bolt {
+	border-left: 5px solid #E1F4FA;
+}
+
+.active i.fa.fa-map-marker {
+	background: #FACE2A;
+	color: #FFFFFF;
+}
+
+.active i.fa.fa-file-text-o {
+	background: #EC9D1E;
+	color: #FFFFFF;
+}
+
+.active i.fa.fa-bar-chart-o {
+	border-left: 5px solid #DB5343;
+	color: #FFFFFF;
+}
+
+.activei.fa.fa-comment-o {
+	border-left: 5px solid #E79EC6;
+	color: #FFFFFF;
+}
+
+.active i.fa.fa-envelope-o {
+	border-left: 5px solid #B9B8F2;
+	color: #FFFFFF;
+}
+
+.active i.fa.fa-bolt {
+	border-left: 5px solid #E1F4FA;
+	color: #FFFFFF;
+}
