@@ -1,6 +1,7 @@
 <?php
 
 class AdminUserController extends \BaseController {
+	protected $layout 		= 'layouts.admin.index';
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +10,8 @@ class AdminUserController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$users 				= User::all();
+		$this->layout->main 		= View::make('admin.user.index')->with('users',$users);
 	}
 
 

@@ -41,7 +41,9 @@
     </header>
   <div id="main" class="clearfix">
     <div class="sidebar col-md-3">
-      a
+      <ul class="nav nav-stacked">
+        <li><a href="/admin/users">Users</a></li>
+      </ul>
     </div>
     <div class="main-content col-md-9">
       <?php echo (isset($main) ? $main : null); ?>
