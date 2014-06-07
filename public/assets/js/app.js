@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 	$("html").niceScroll({cursorcolor:"#397F43"});
-	
+	$(".user .sidebar .reports .tab-content").niceScroll({cursorcolor:"#397F43"});
 	$('#newest').click(function(){
 		$('.trending').css({display:'none'});
 		$('.newest').css({display:'block'});

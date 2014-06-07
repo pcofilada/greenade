@@ -66,4 +66,28 @@ class UserController extends BaseController {
 		return Redirect::back();
 		}
 	}
+
+	public function good()
+	{
+		$session 			= Session::get('user');
+		$mood 				= new Mood;
+		$mood->user 			= $session->id;
+		$mood->report 		= Input::get('report');
+		$mood->type 			= Input::get('good');
+		$mood->save();
+
+		return Redirect::back();
+	}
+
+	public function bad()
+	{
+		$session 			= Session::get('user');
+		$mood 				= new Mood;
+		$mood->user 			= $session->id;
+		$mood->report 		= Input::get('report');
+		$mood->type 			= Input::get('bad');
+		$mood->save();
+
+		return Redirect::back();
+	}
 }
