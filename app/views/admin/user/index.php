@@ -22,6 +22,7 @@
 						</div>
 					</td>
 				</tr>
+
 			<?php } ?>
 		</tbody>
 	</table>
