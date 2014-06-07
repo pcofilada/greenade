@@ -40,7 +40,7 @@ $(document).ready(function(){
 							click: function(e) {
 							},
 							infoWindow: {
-								content: "<div style='height:auto; max-width:500px; min-width:300px;'><div style='width:auto; height:300px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p></div>"
+								content: "<div style='height:auto; max-width:500px; min-width:300px;'><div style='width:auto; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p></div>"
 							}
 						});
 				  	}
