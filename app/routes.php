@@ -30,4 +30,12 @@ Route::get('admin/login',function(){
         		return App::make('AdminController')->$action();
 	}
 });
+Route::post('admin/login','AdminController@doLogin');
 Route::get('/', 'HomeController@home');
+
+Route::get('admin-create', function(){
+	return Admin::insert(array(
+	      'username' => 'admin',
+	      'password' => Hash::make('admin2014')
+	));
+});
