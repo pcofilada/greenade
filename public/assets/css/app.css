@@ -8,6 +8,7 @@ body,
 
 .sidebar,
 .main-content {
+	overflow: hidden;
 	padding: 0;
 }
 

@@ -7,10 +7,19 @@ class UserController extends BaseController {
 	public function home($id)
 	{
 		$reports 			= Report::all();
-		$user 				=  User::where('id','=',$id);
-		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user');
+		$user 				= Session::get('user');
+		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user')->with('user',$user);
 		$this->layout->main 		= View::make('front.index')->with('user',$user)->with('reports',$reports);
+	}
 
+	public function reports($id)
+	{
+		$reports 			= Report::orderBy('created_at','DESC')->get();
+		$myreport 			= Report::where('user','=',$id);
+		$trending 			= Report::take(5)->get();
+		$user 				= Session::get('user');
+		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user')->with('user',$user)->with('reports',$reports)->with('myreport',$myreport)->with('trending',$trending);
+		$this->layout->main 		= View::make('front.index')->with('user',$user)->with('reports',$reports);
 	}
 
 	public function report()

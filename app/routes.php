@@ -24,6 +24,7 @@ Route::group(array('prefix' => 'admin','before'=>'admin'), function()
 Route::group(array('prefix' => 'user/{name}'), function()
 {
 	Route::get('/','UserController@home');
+	Route::get('reports','UserController@reports');
 	Route::post('report','UserController@report');
 });
 
