@@ -1,6 +1,6 @@
 <ul class="nav nav-pills nav-stacked">
-	<li><a href="/user/<?php echo $user->name; ?>" class="active"><i class="fa fa-map-marker"></i> Map</a></li>
-	<li><a href="/user/<?php echo $user->name; ?>/reports"><i class="fa fa-file-text-o"></i> Reports</a></li>
+	<li><a href="/user/<?php echo $user->name; ?>" class="<?php echo ($active == 'map' ? 'active' : null); ?>" ><i class="fa fa-map-marker"></i> Map</a></li>
+	<li><a href="/user/<?php echo $user->name; ?>/reports" class="<?php echo ($active == 'reports' ? 'active' : null); ?>" ><i class="fa fa-file-text-o"></i> Reports</a></li>
 	<li><a href=""><i class="fa fa-comment-o"></i> Notification</a></li>
 	<li><a href=""><i class="fa fa-envelope-o"></i>  Messages</a></li>
 	<li><a href=""><i class="fa fa-bolt"></i> Quest</a></li>
