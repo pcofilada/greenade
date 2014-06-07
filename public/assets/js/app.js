@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var sUrl = window.location.host;
+
 	var map = new GMaps({
 	  div: '#map',
 	  lat: -12.043333,
@@ -17,22 +19,23 @@ $(document).ready(function(){
 	  			var iLat = value.lat;
 	  			var iLong = value.long;
 	  			if(typeof(value.title) !='undefined' && typeof(value.description) !='undefined'){
-			  		map.addMarker({
-						lat: iLat,
-						lng: iLong,
-						title: 'Lima',
-						click: function(e) {
-						},
-						infoWindow: {
-							content: "<p>title :"+value.title+"</p><p>description: "+value.description+"</p>"
-						}
-					});
+	  				var sImg = value.image[0];
+	  				if(typeof(sImg) !='undefined' ||sImg.length > 0 || sImg !=""){
+				  		map.addMarker({
+							lat: iLat,
+							lng: iLong,
+							title: value.title,
+							click: function(e) {
+							},
+							infoWindow: {
+								content: "<p>title :"+value.title+"</p><p>description: "+value.description+"</p><img src='"+sImg +"' height='150' width='auto'>"
+							}
+						});
+				  	}
 			  	}
 		  	}
 	  	});
 	}
-	
-  	
 
 //gmap events
 

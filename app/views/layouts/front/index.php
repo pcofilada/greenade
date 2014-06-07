@@ -51,12 +51,7 @@
       <?php if (!Session::has('user')) { ?>
         <div class="date">
           <h4>TRENDING REPORT</h4>
-          <h5><?php 
-          $date = new DateTime('now', new DateTimeZone('Asia/Manila'));
-
-          echo $date->format('M d, Y'); 
-
-          ?></h5>
+          <h5>June 7, 2014</h5>
         </div>
       <?php } ?>
         <?php echo (isset($sidebar) ? $sidebar : null); ?>
@@ -171,7 +166,7 @@
         </div>
       </div>
     </div>    
-
+    
     <?php }else{ ?>
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
           <div class="modal-dialog">
