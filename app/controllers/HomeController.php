@@ -74,10 +74,9 @@ class HomeController extends BaseController {
 			$user 			= User::where('email', $userdata['email'])->first();
 			if($user && Hash::check($userdata['password'],$user->password)){
 				Session::put('user',$user);
-				return Redirect::to('/');
+				return Redirect::to('/user/'.$user->name);
 			}else{
-				return "error";
-				dd(Session::all());
+				return Redirect::to('/')->withErrors('Wrong Username/Password')->withInput();
 			}
 		}
 	}

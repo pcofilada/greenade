@@ -21,6 +21,11 @@ Route::group(array('prefix' => 'admin','before'=>'admin'), function()
 	});
 });
 
+Route::group(array('prefix' => 'user'), function()
+{
+	Route::get('/{name}','UserController@home');
+});
+
 Route::post('signup','HomeController@doSignup');
 Route::post('login','HomeController@doLogin');
 Route::get('logout', function(){
