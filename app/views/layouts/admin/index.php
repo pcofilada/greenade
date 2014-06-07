@@ -10,9 +10,6 @@
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/assets/css/app.css" rel="stylesheet">
-    <link href="/assets/css/styles.css" rel="stylesheet">
-    <link href="/assets/css/styles.less" rel="stylesheet">
-    <link href="/assets/css/prettify.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -44,7 +41,5 @@
     <script src="/assets/js/gmaps.js"></script>
     <script src="/assets/js/app.js"></script>
     <script src="/assets/js/Chart.js"></script>
-    <script src="/assets/js/prettify.js"></script>
-    <script src="/assets/js/prettify.less"></script>
   </body>
 </html>
