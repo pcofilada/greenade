@@ -53,6 +53,11 @@ $(document).ready(function(){
 	  			var iLong = value.long;
 	  			if(typeof(value.title) !='undefined' && typeof(value.description) !='undefined'){
 	  				var sImg = value.image[0];
+	  				var sDate = value.created_at;
+	  				sDate =  sDate.split(' ')[0];
+	  				var dDate = new Date(sDate);
+	  				var str = dDate.toString("MMM yyyy");
+	  				console.log('sData : ' + str);
 	  				if(typeof(sImg) !='undefined' ||sImg.length > 0 || sImg !=""){
 				  		map.addMarker({
 							lat: iLat,
@@ -61,7 +66,7 @@ $(document).ready(function(){
 							click: function(e) {
 							},
 							infoWindow: {
-								content: "<div style='height:auto; max-width:400px; min-width:300px;'><div style='width:400px; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p><p>"+value.created_at+"</p></div>"
+								content: "<div style='height:auto; max-width:400px; min-width:300px;'><div style='width:400px; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p><p>"+value.created_at+"month >>> </p></div>"
 							}
 						});
 				  	}
