@@ -103,3 +103,19 @@ header a {
 	float: none;
 	margin: 0 auto;
 }
+
+/*Users*/
+
+.users form.delete {
+	display: inline-block;
+	color: #397f43;
+}
+
+.users form input {
+	background: none;
+	border: none;
+}
+
+.users .icons.right a{
+	color: #397f43;
+}
