@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
 	$("html").niceScroll({cursorcolor:"#397F43"});
 	
 	$('#newest').click(function(){
@@ -14,11 +15,31 @@ $(document).ready(function(){
 	var sUrl = window.location.host;
 
 	var map = new GMaps({
-	  div: '#map',
+	  el: '#map',
 	  lat: -12.043333,
-	  lng: -77.028333,
-	  draggable: true
+	  lng: -77.028333
 	});
+
+// geolocation
+
+	GMaps.geolocate({
+	  success: function(position) {
+	  	console.log(JSON.stringify(position));
+	    map.setCenter(position.coords.latitude, position.coords.longitude);
+	  },
+	  error: function(error) {
+	    console.log('Geolocation failed: '+error.message);
+	  },
+	  not_supported: function() {
+	    console.log("Your browser does not support geolocation");
+	  },
+	  always: function() {
+	    console.log("Done!");
+	  }
+	});
+
+
+
 
 
   	var oMap = $('#map_data').val();
