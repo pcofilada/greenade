@@ -18,18 +18,21 @@
     <![endif]-->
   </head>
   <body>
-    <header class="clearfix">
+    <header class="<?php if (Session::has('user')) { ?>user<?php } ?> clearfix">
       <div class="pull-left">
-        <img src="/assets/images/logo.png" alt="" style="width: 180px; height: 60px;">
+        <?php if (Session::has('user')) { ?>
+          <img src="/assets/images/user-logo.png" alt="" style="width: 120px; height: 40px;">
+        <?php }else{ ?>
+          <img src="/assets/images/logo.png" alt="" style="width: 180px; height: 60px;">
+        <?php } ?>
       </div>
       <div class="pull-right">
         <ul class="nav nav-pills">
           <?php if (Session::has('user')) {
               $user = Session::get('user'); ?>
-              <li><a href="" class="btn btn-default" data-toggle="modal" data-target="#map_report">Add Report</a></li>
-              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?> !</a>
+              <li><a href="" class="btn btn-default"><i class="fa fa-plus-square"></i> Add Report</a></li>
+              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?>  <i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
-                <li><a href="">My Reports</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#profile-modal">Profile</a></li>
                 <li><a href="/logout">Logout</a></li>
               </ul>
@@ -48,7 +51,7 @@
         </ul>
       </div>
     </header>
-    <div id="main" class="clearfix">
+    <div id="main" class="<?php if (Session::has('user')) { ?>user<?php } ?> clearfix">
       <div class="sidebar col-md-3">
       <?php if (!Session::has('user')) { ?>
         <div class="date">

@@ -50,6 +50,10 @@ header a {
 	color: #397f43;
 }
 
+#main .sidebar .nav.nav-pills li a {
+	font-size: 18px;
+}
+
 /*Date*/
 
 .date {
@@ -121,4 +125,34 @@ header a {
 
 .users .icons.right a{
 	color: #397f43;
+}
+
+/*Front User*/
+
+header.user.clearfix {
+	background: #397F43;
+	border-bottom: 0;
+}
+header.user .nav.nav-pills {
+	padding: 0;
+}
+
+header.user ul li a.btn.btn-default {
+	background: #FECF1A;
+	border: 0;
+	padding: 5px;
+	color: #FFFFFF;
+	margin: 5px 0;
+}
+
+header.user ul li a {
+	color: #FFFFFF;
+}
+
+header.user ul li .dropdown-menu a {
+	color: #555555;
+}
+
+header .nav .open>a {
+	background: none !important;
 }
