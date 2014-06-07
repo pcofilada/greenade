@@ -44,6 +44,16 @@ $(document).ready(function(){
 		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
 			$('#map_report').find('input[type="text"]#long').val(fLng);
 		  	initialize(latLng , modal_map_global);
+		  },
+		  dragend: function(e){
+		  	var latLng = e.latLng;
+		  	var fLat = latLng.k;
+		  	var fLng = latLng.A;
+
+		  	console.log(JSON.stringify(latLng));
+
+		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
+			$('#map_report').find('input[type="text"]#long').val(fLng);
 		  }
 		});
 
