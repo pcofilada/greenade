@@ -61,7 +61,7 @@ $(document).ready(function(){
 							click: function(e) {
 							},
 							infoWindow: {
-								content: "<div style='height:auto; max-width:400px; min-width:300px;'><div style='width:400px; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p></div>"
+								content: "<div style='height:auto; max-width:400px; min-width:300px;'><div style='width:400px; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p><p>"+value.created_at+"</p></div>"
 							}
 						});
 				  	}
@@ -118,6 +118,7 @@ $(document).ready(function(){
 			    console.log("Your browser does not support geolocation");
 			  },
 			  always: function() {
+
 			    console.log("Done!");
 			  }
 			});
