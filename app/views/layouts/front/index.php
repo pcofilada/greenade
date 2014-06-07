@@ -41,10 +41,10 @@
               </ul>
               </li>
           <?php }else{ ?>
-            <li><a href="" data-toggle="modal" data-target="#contribute-modal" class="btn btn-link">How Can I Contribute?</a></li>
-            <li><button href="#" data-toggle="modal" data-target="#signup-modal" class="btn btn-success">Sign Up</button></li>
+            <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
             <li class="divider">|</li>
-            <li><button href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button></li>
+            <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
           <?php } ?>
         </ul>
       </div>
@@ -116,59 +116,6 @@
             </div>
           </div>
         </div>
-
-        <div id="map_report" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-             <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="contribute-modalLabel">Report</h2>
-          </div>
-          <div class="modal-body">
-              <form class="form-horizontal" role="form" action="/user/<?php echo $user->name; ?>/report" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
-                      <div class="col-sm-10 pull-right">
-                        <div id="map_modal" style="width: 100%; height: 300px;"></div>
-                      </div>
-                    </div>
-                   <div class="form-group">
-                     <label for="name" class="col-sm-2 control-label">Title</label>
-                     <div class="col-sm-10">
-                       <input type="text" class="form-control" name="title" id="title" placeholder="Title">
-                     </div>
-                   </div>
-                  <div class="form-group">
-                    <label for="mobile" class="col-sm-2 control-label">Description</label>
-                    <div class="col-sm-10">
-                      <textarea type="text" class="form-control" name="description" id="description" placeholder="Description" ></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="mobile" class="col-sm-2 control-label"> Image</label>
-                    <div class="col-sm-10">
-                      <input name="image[]" type="file" multiple />
-                    </div>
-                  </div>
-                  <div class="form-group">
-                     <div class="col-sm-10">
-                       <input type="text" class="form-control hidden" name="long" id="long" >
-                       <input type="text" class="form-control hidden" name="lat" id="lat" >
-                     </div>
-                  </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                      <input type="submit" class="btn btn-primary" value="REPORT">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
-                    </div>
-                  </div>
-                  <br> 
-                  <br>
-                </form>
-          </div>
-        </div>
-      </div>
-    </div> 
     <?php }else{ ?>
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -271,6 +218,57 @@
         </div>
       </div>
     </div>
+
+    <div id="map_report" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+             <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title" id="contribute-modalLabel">Report</h2>
+          </div>
+          <div class="modal-body">
+              <form class="form-horizontal" role="form" action="/report" method="POST">
+                   <div class="form-group">
+                     <label for="name" class="col-sm-2 control-label">Title</label>
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                     </div>
+                   </div>
+                  <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-10">
+                      <textarea type="text" class="form-control" name="description" id="description" placeholder="Description" ></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label"> Image</label>
+                    <div class="col-sm-10">
+                      <input name="image" type="file" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control hidden" name="long" id="long" >
+                       <input type="text" class="form-control hidden" name="lat" id="lat" >
+                     </div>
+                  </div>
+                    <div class="full-width" style="display:block;">
+                      <div id="map_modal" style="width: 800px; height: 300px;"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-primary" value="REPORT">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                  <br> 
+                  <br>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
