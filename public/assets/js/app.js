@@ -41,21 +41,10 @@ $(document).ready(function(){
 		  	var fLng = latLng.A;
 		  	 modal_map_global= map_modal;
 		  	 //deleteMarkers()
-
+		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
+			$('#map_report').find('input[type="text"]#long').val(fLng);
 		  	initialize(latLng , modal_map_global);
 		  }
-
-		  /*,
-		  click: function(e){
-		  	var latLng = e.latLng;
-			var fLat = latLng.k;
-			var fLng = latLng.A;
-		  	initialize(latLng);
-		  },
-		  infoWindow: {
-			  content: '<p>form</p>'
-			}
-			*/
 		});
 
 	}
@@ -68,29 +57,20 @@ $(document).ready(function(){
 				var uiMarker = modal_map_global.addMarker({
 					lat: oData.k,
 					lng: oData.A,
-					draggable: true,
+					draggable: true
+					/*,
 					click:function(){
-						console.log(JSON.stringify(latLng));
-						$('#map_report').find('input[type="text"]#lat').val(oData.k);
-						$('#map_report').find('input[type="text"]#long').val(oData.A);
+						
+						
 
 					},
 					infoWindow: {
 						content: "<p>TAPOS NA!</p>"
-					}
+					} */
 				});
 			}
 		}
     }
-	function clearMarkers() {
-	  setAllMap(null);
-	}
-
-    function deleteMarkers() {
-	  clearMarkers();
-	  markers = [];
-	}
-
 	initialize();
 
 });
