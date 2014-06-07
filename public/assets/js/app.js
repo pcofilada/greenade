@@ -79,32 +79,35 @@ $(document).ready(function(){
 	});
 
 	function modal_map_int(){
-		var map_modal = new GMaps({
-		  div: '#map_modal',
-		  lat: -12.043333,
-		  lng: -77.028333,
-		  draggable: true,
-		  height: 100,
-		  width: 500,
-		  click: function(e){
-		  	var latLng = e.latLng;
-		  	var fLat = latLng.k
-		  	var fLng = latLng.A;
-		  	 modal_map_global= map_modal;
-		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
-			$('#map_report').find('input[type="text"]#long').val(fLng);
-		  	initialize(latLng , modal_map_global);
-		  },
-		  dragend: function(e){
-		  	var latLng = e.latLng;
-		  	var fLat = latLng.k;
-		  	var fLng = latLng.A;
-		  	$('#map_report').find('input[type="text"]#lat').val(fLat);
-			$('#map_report').find('input[type="text"]#long').val(fLng);
-		  }
-		});
+		setTimeout(function(){
+			
+			var map_modal = new GMaps({
+			  div: '#map_modal',
+			  lat: -12.043333,
+			  lng: -77.028333,
+			  draggable: true,
+			  height: 100,
+			  width: 500,
+			  click: function(e){
+			  	var latLng = e.latLng;
+			  	var fLat = latLng.k
+			  	var fLng = latLng.A;
+			  	 modal_map_global= map_modal;
+			  	$('#map_report').find('input[type="text"]#lat').val(fLat);
+				$('#map_report').find('input[type="text"]#long').val(fLng);
+			  	initialize(latLng , modal_map_global);
+			  },
+			  dragend: function(e){
+			  	var latLng = e.latLng;
+			  	var fLat = latLng.k;
+			  	var fLng = latLng.A;
+			  	$('#map_report').find('input[type="text"]#lat').val(fLat);
+				$('#map_report').find('input[type="text"]#long').val(fLng);
+			  }
+			});
 
-		
+		},500)
+
 	GMaps.geolocate({
 	  success: function(position) {
 	  	console.log(JSON.stringify(position));
