@@ -24,7 +24,6 @@
       </div>
       <div class="pull-right">
         <ul class="nav nav-pills">
-          <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
           <?php if (Session::has('user')) {
               $user = Session::get('user'); ?>
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?> !</a>
@@ -35,6 +34,7 @@
               </ul>
               </li>
           <?php }else{ ?>
+            <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
             <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
             <li class="divider">|</li>
             <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
@@ -49,10 +49,12 @@
     </header>
     <div id="main" class="clearfix">
       <div class="sidebar col-md-3">
+      <?php if (!Session::has('user')) { ?>
         <div class="date">
           <h4>TRENDING REPORT</h4>
           <h5>June 7, 2014</h5>
         </div>
+      <?php } ?>
         <?php echo (isset($sidebar) ? $sidebar : null); ?>
       </div>
       <div class="main-content col-md-9">
