@@ -220,13 +220,35 @@
         <div class="modal-content">
              <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="contribute-modalLabel">How Can I Contribute</h2>
+            <h2 class="modal-title" id="contribute-modalLabel">Report</h2>
           </div>
           <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, fugiat, sed, totam vel atque dolorem rem quidem repellat tempore obcaecati molestias incidunt consequuntur culpa sunt quam at et ut expedita!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, blanditiis numquam consequuntur est id libero at. Doloribus eveniet aliquid saepe ullam similique! Hic ipsum molestias nostrum amet enim dicta quod.</p>
-              <p>Consectetur adipisicing elit. Illum, blanditiis numquam consequuntur est id libero at. Doloribus eveniet aliquid saepe ullam similique! Hic ipsum molestias nostrum amet enim dicta quod.</p>
-              <p>Hic ipsum molestias nostrum amet enim dicta quodLorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, blanditiis numquam consequuntur est id libero at. Doloribus eveniet aliquid saepe ullam similique! Hic ipsum molestias nostrum amet enim dicta quod.</p>
+              <form class="form-horizontal" role="form" action="/report" method="POST">
+                   <div class="form-group">
+                     <label for="name" class="col-sm-2 control-label">Title</label>
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+                     </div>
+                   </div>
+                  <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-10">
+                      <textarea type="text" class="form-control" name="description" id="description" placeholder="Description" ></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control" name="long" id="long" >
+                       <input type="text" class="form-control" name="lat" id="lat" >
+                     </div>
+                   </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-primary" value="REPORT">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                </form>
           </div>
         </div>
       </div>
