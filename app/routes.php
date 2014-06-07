@@ -21,9 +21,10 @@ Route::group(array('prefix' => 'admin','before'=>'admin'), function()
 	});
 });
 
-Route::group(array('prefix' => 'user'), function()
+Route::group(array('prefix' => 'user/{name}'), function()
 {
-	Route::get('/{name}','UserController@home');
+	Route::get('/','UserController@home');
+	Route::post('report','UserController@report');
 });
 
 Route::post('signup','HomeController@doSignup');

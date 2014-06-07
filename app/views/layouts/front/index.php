@@ -227,7 +227,12 @@
             <h2 class="modal-title" id="contribute-modalLabel">Report</h2>
           </div>
           <div class="modal-body">
-              <form class="form-horizontal" role="form" action="/report" method="POST">
+              <form class="form-horizontal" role="form" action="/user/<?php echo $user->name; ?>/report" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <div class="col-sm-10 pull-right">
+                        <div id="map_modal" style="width: 100%; height: 300px;"></div>
+                      </div>
+                    </div>
                    <div class="form-group">
                      <label for="name" class="col-sm-2 control-label">Title</label>
                      <div class="col-sm-10">
@@ -252,9 +257,6 @@
                        <input type="text" class="form-control hidden" name="lat" id="lat" >
                      </div>
                   </div>
-                    <div class="full-width" style="display:block;">
-                      <div id="map_modal" style="width: 800px; height: 300px;"></div>
-                    </div>
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
