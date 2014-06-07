@@ -34,7 +34,7 @@
               <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?>  <i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="#" data-toggle="modal" data-target="#profile-modal">Profile</a></li>
-                <li><a href="/logout">Logout</a></li>
+                <li><a href="/user/<?php echo $user->name;?>/logout">Logout</a></li>
               </ul>
               </li>
           <?php }else{ ?>

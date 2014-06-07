@@ -26,14 +26,14 @@ Route::group(array('prefix' => 'user/{name}'), function()
 	Route::get('/','UserController@home');
 	Route::get('reports','UserController@reports');
 	Route::post('report','UserController@report');
+	Route::get('logout', function(){
+		Session::flush();
+		return Redirect::to('/');
+	});
 });
 
 Route::post('signup','HomeController@doSignup');
 Route::post('login','HomeController@doLogin');
-Route::get('logout', function(){
-	Session::flush();
-	return Redirect::to('/');
-});
 Route::get('admin/login',function(){
 	if(Session::has('admin')){
 		return Redirect::to('admin');
