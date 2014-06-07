@@ -224,7 +224,7 @@
             <h2 class="modal-title" id="contribute-modalLabel">Report</h2>
           </div>
           <div class="modal-body">
-              <form class="form-horizontal" role="form" action="/user/<?php echo $user->name ?>/report" method="POST">
+              <form class="form-horizontal" role="form" action="/user/<?php echo $user->name ?>/report" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                       <div class="col-sm-10 pull-right">
                         <div id="map_modal" style="width: 100%; height: 300px;"></div>
@@ -245,7 +245,7 @@
                   <div class="form-group">
                     <label for="mobile" class="col-sm-2 control-label"> Image</label>
                     <div class="col-sm-10">
-                      <input name="image" type="file" />
+                      <input name="image[]" type="file" multiple/>
                     </div>
                   </div>
                   <div class="form-group">

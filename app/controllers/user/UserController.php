@@ -37,7 +37,7 @@ class UserController extends BaseController {
 					$destinationPath 	= public_path().'/reports/'.$session->name;
 					$upload_success 	= $file->move($destinationPath, $filename);
 					if($upload_success){
-						array_push($image,'/reports/'.$session->name.$filename);
+						array_push($image,'/reports/'.$session->name.'/'.$filename);
 					}
 				}
 			}
