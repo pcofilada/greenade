@@ -17,7 +17,6 @@ class UserController extends BaseController {
 		$user 				= Session::get('user');
 		$reports 			= Report::orderBy('created_at','DESC')->get();
 		$myreport 			= Report::where('user','=',$user->id)->get();
-		
 		$trending 			= Report::take(5)->get();
 		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user')->with('user',$user)->with('reports',$reports)->with('myreport',$myreport)->with('trending',$trending);
 		$this->layout->main 		= View::make('front.index')->with('user',$user)->with('reports',$reports);
@@ -38,7 +37,7 @@ class UserController extends BaseController {
 		$validator 			= Validator::make(Input::all(),$rules);
 
 		if($validator->fails()){
-			return Redirect::to('/')->withErrors($validator)->withInput();
+			return Redirect::back('/')->withErrors($validator)->withInput();
 		}else{
 			$image = array();
 			if(Input::hasFile('image') &&  $file = Input::file('image')){
@@ -62,7 +61,7 @@ class UserController extends BaseController {
 		$report->save();
 
 		Session::flash('success','Report created!');
-		return Redirect::to('/user/'.$session->name);
+		return Redirect::back();
 		}
 	}
 }

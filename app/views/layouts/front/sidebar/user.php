@@ -16,6 +16,7 @@
 		<!-- Tab panes -->
 		<div class="tab-content">
 		  <div class="tab-pane active" id="myreport">
+		  	<h3>My Report</h3>
 		  	<?php foreach ($myreport as $myreport) { ?>
 				<div class="myreport clearfix">
 					<div class="image col-md-4">
@@ -49,6 +50,7 @@
 			<?php } ?>
 		  </div>
 		  <div class="tab-pane" id="newest">
+		  	<h3>Newest Report</h3>
 		  	<?php foreach ($reports as $newest) { ?>
 				<div class="newest clearfix">
 					<div class="image col-md-4">
@@ -82,6 +84,7 @@
 			<?php } ?>
 		  </div>
 		  <div class="tab-pane" id="trending">
+		  	<h3>Trending Report</h3>
 		  	<?php foreach ($trending as $trending) { ?>
 				<div class="trending clearfix">
 					<div class="image col-md-4">
