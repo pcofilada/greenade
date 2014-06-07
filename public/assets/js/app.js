@@ -40,6 +40,8 @@ $(document).ready(function(){
 		  	var fLat = latLng.k
 		  	var fLng = latLng.A;
 		  	 modal_map_global= map_modal;
+		  	 //deleteMarkers()
+
 		  	initialize(latLng , modal_map_global);
 		  }
 
@@ -60,14 +62,15 @@ $(document).ready(function(){
 	
 	function initialize(oData, modal_map_global) {
 		if(typeof(oData) !='undefined'){
-			console.log('initialize');
+			var uiMark;
 			if(typeof(modal_map_global) !='undefined'){
-				modal_map_global.addMarker({
+				 modal_map_global.removeMarkers()
+				var uiMarker = modal_map_global.addMarker({
 					lat: oData.k,
 					lng: oData.A,
 					draggable: true,
 					click:function(){
-						console.log('click in map');
+						console.log(JSON.stringify(latLng));
 						$('#map_report').find('input[type="text"]#lat').val(oData.k);
 						$('#map_report').find('input[type="text"]#long').val(oData.A);
 
@@ -79,8 +82,14 @@ $(document).ready(function(){
 			}
 		}
     }
+	function clearMarkers() {
+	  setAllMap(null);
+	}
 
-
+    function deleteMarkers() {
+	  clearMarkers();
+	  markers = [];
+	}
 
 	initialize();
 
