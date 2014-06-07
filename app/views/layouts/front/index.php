@@ -287,6 +287,7 @@
     <script src="/assets/js/gmaps.js"></script>
     <script src="/assets/js/app.js"></script>
     <script src="/assets/js/Chart.js"></script>
+    <script src="/assets/js/date.js"></script>
     <script src="/assets/js/jquery.nicescroll.min.js"></script>
   </body>
 </html>
