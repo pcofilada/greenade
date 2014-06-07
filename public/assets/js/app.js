@@ -41,6 +41,14 @@ $(document).ready(function(){
 				lat: oData.k,
 				lng: oData.A,
 				draggable: true,
+				click:function(){
+					$('#map_report').modal('show');
+					//console.log('map report lat : ' +$('#map_report').find('input[type="text"]#lat').length);
+					//console.log('map report long  : ' +$('#map_report').find('input[type="text"]#long').length);
+					$('#map_report').find('input[type="text"]#lat').val(oData.k);
+					$('#map_report').find('input[type="text"]#long').val(oData.A);
+
+				},
 				infoWindow: {
 					content: "<p>TAPOS NA!</p>"
 				}

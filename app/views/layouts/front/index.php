@@ -237,6 +237,12 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label"> Image</label>
+                    <div class="col-sm-10">
+                      <input name="image" type="file" />
+                    </div>
+                  </div>
+                  <div class="form-group">
                      <div class="col-sm-10">
                        <input type="text" class="form-control hidden" name="long" id="long" >
                        <input type="text" class="form-control hidden" name="lat" id="lat" >
