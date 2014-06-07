@@ -42,12 +42,13 @@
     </header>
   <div id="main" class="admin clearfix">
     <div class="sidebar col-md-3">
-      <ul class="nav nav-stacked">
-        <li><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li><a href="/admin/users"><i class="fa fa-users"></i> Users</a></li>
-        <li><a href="#"><i class="fa fa-bar-chart-o"></i> Stats</a></li>
-        <li><a href="#"><i class="fa fa-file-text-o"></i> Reports</a></li>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href=""><i class="fa fa-map-marker"></i> Dasboard</a></li>
+        <li><a href=""><i class="fa fa-file-text-o"></i> Users</a></li>
+        <li><a href=""><i class="fa fa-comment-o"></i> Stats</a></li>
+        <li><a href=""><i class="fa fa-envelope-o"></i>  Reports</a></li>
       </ul>
+      
     </div>
     <div class="main-content col-md-9">
       <?php echo (isset($main) ? $main : null); ?>
