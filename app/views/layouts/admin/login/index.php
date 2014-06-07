@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Greenade</title>
-
+    <link rel="shortcut icon" type="image/png" href="/assets/images/admin-logo.png"/>
     <!-- Bootstrap -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -19,9 +19,9 @@
   </head>
   <body>
   <div id="main" class="clearfix">
-    <div class="login col-md-4">
-      <h3><img src="/assets/images/admin-logo.png" style="width:100px;"/>&nbsp;&nbsp;&nbsp;Admin Login</h3>
-      <form class="form-horizontal clearfix" role="form" action="login" method="POST">
+    <div class="login col-md-12">
+      <form class="form-horizontal col-md-4 clearfix" role="form" action="login" method="POST">
+        <h3><img src="/assets/images/admin-logo.png" style="width:100px;"/>&nbsp;&nbsp;&nbsp;Admin Login</h3>
         <div class="form-group">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-10">

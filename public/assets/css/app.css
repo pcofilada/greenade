@@ -91,3 +91,15 @@ header a {
 .trending .location {
 	margin: 0;
 }
+
+/*Admin Login*/
+
+.login h3 {
+	text-align: center;
+}
+
+.login form {
+	display: block;
+	float: none;
+	margin: 0 auto;
+}
