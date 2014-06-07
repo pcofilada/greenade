@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+    $("html").niceScroll({cursorcolor:"#397F43"});
+
 	var sUrl = window.location.host;
 
 	var map = new GMaps({
