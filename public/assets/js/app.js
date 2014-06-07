@@ -16,7 +16,7 @@ $(document).ready(function(){
 	  		if(typeof(value.lat) !='undefined' || value.lat != "" || value.lat !=null &&
 	  			typeof(value.long) !='undefined' || value.long != "" || value.long !=null){
 	  			var iLat = value.lat;
-	  			var iLong = value.log;
+	  			var iLong = value.long;
 
 		  		map.addMarker({
 				  lat: iLat,
