@@ -63,16 +63,8 @@
 						echo $address;
 						 ?></h5>
 						<div class="status">
-								<form action="/user/<?php echo $user->name; ?>/good" method="POST">
-									<input type="hidden" name="good" value="good">
-									<input type="hidden" name="report" value="<?php echo $newest->id; ?>">
-									<button type="submit"><span><i class="fa fa-smile-o"></i> 30</span></button>
-								</form>
-								<form action="/user/<?php echo $user->name; ?>/bad" method="POST">
-									<input type="hidden" name="bad" value="bad">
-									<input type="hidden" name="report" value="<?php echo $newest->id; ?>">
-									<button type="submit"><span><i class="fa fa-frown-o"></i> 30</span></button>
-								</form>
+								<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
+								<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
 								<a href=""><span><i class="fa fa-comments-o"></i> 92</span></a>
 						</div>
 					</div>
