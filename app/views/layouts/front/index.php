@@ -27,7 +27,12 @@
           <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
           <?php if (Session::has('user')) {
               $user = Session::get('user'); ?>
-              <li><a href="#">Welcome <?php echo $user->name; ?> !</a>
+              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->name; ?> !</a>
+              <ul class="dropdown-menu">
+                <li><a href="">My Reports</a></li>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Logout</a></li>
+              </ul>
               </li>
           <?php }else{ ?>
             <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
