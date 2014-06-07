@@ -18,9 +18,30 @@
     <![endif]-->
   </head>
   <body>
+    <header class="<?php if (Session::has('admin')) { ?>user<?php } ?> clearfix">
+      <div class="pull-left">
+        <?php if (Session::has('admin')) { ?>
+          <img src="/assets/images/user-logo.png" alt="" style="width: 120px; height: 40px;">
+        <?php }else{ ?>
+          <img src="/assets/images/logo.png" alt="" style="width: 180px; height: 60px;">
+        <?php } ?>
+      </div>
+      <div class="pull-right">
+        <ul class="nav nav-pills">
+          <?php if (Session::has('admin')) {
+              $user = Session::get('admin'); ?>
+              <li><a href="/admin/logout">Logout</a></li>
+          <?php }else{ ?>
+          <li><a href="" data-toggle="modal" data-target="#contribute-modal">How Can I Contribute</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
+            <li class="divider">|</li>
+            <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
+          <?php } ?>
+        </ul>
+      </div>
+    </header>
   <div id="main" class="admin clearfix">
     <div class="sidebar col-md-3">
-      <div class="logo"><img src="/assets/images/logo.png" alt="" style="width: 100%;"></div>
       <ul class="nav nav-stacked">
         <li><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
         <li><a href="/admin/users"><i class="fa fa-users"></i> Users</a></li>
