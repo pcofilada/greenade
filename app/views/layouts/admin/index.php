@@ -18,31 +18,14 @@
     <![endif]-->
   </head>
   <body>
-    <header class="clearfix">
-      <div class="pull-left">
-        <img src="/assets/images/logo.png" alt="" style="width: 180px; height: 60px;">
-      </div>
-      <div class="pull-right">
-        <ul class="nav nav-pills">
-          <?php if (Session::has('admin')) {
-              $user = Session::get('admin'); ?>
-              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome <?php echo $user->email; ?> !</a>
-              <ul class="dropdown-menu">
-                <li><a href="/admin/logout">Logout</a></li>
-              </ul>
-              </li>
-          <?php }else{ ?>
-            <li><a href="#" data-toggle="modal" data-target="#signup-modal">SIGN UP</a></li>
-            <li class="divider">|</li>
-            <li><a href="#" data-toggle="modal" data-target="#login-modal">LOG IN</a></li>
-          <?php } ?>
-        </ul>
-      </div>
-    </header>
   <div id="main" class="clearfix">
     <div class="sidebar col-md-3">
+      <div class="logo"><img src="/assets/images/logo.png" alt="" style="width: 100%;"></div>
       <ul class="nav nav-stacked">
-        <li><a href="/admin/users">Users</a></li>
+        <li><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+        <li><a href="/admin/users"><i class="fa fa-users"></i> Users</a></li>
+        <li><a href="#"><i class="fa fa-bar-chart-o"></i> Stats</a></li>
+        <li><a href="#"><i class="fa fa-file-text-o"></i> Reports</a></li>
       </ul>
     </div>
     <div class="main-content col-md-9">
