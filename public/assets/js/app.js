@@ -2,8 +2,7 @@ $(document).ready(function(){
 
 
 	$("html").niceScroll({cursorcolor:"#397F43"});
-	$(".user .sidebar .reports .tab-pane").niceScroll({cursorcolor:"#397F43"});
-
+	
 	$('#newest').click(function(){
 		$('.trending').css({display:'none'});
 		$('.newest').css({display:'block'});
@@ -104,6 +103,24 @@ $(document).ready(function(){
 			$('#map_report').find('input[type="text"]#long').val(fLng);
 		  }
 		});
+
+		
+	GMaps.geolocate({
+	  success: function(position) {
+	  	console.log(JSON.stringify(position));
+	    map_modal.setCenter(position.coords.latitude, position.coords.longitude);
+	  },
+	  error: function(error) {
+	    console.log('Geolocation failed: '+error.message);
+	  },
+	  not_supported: function() {
+	    console.log("Your browser does not support geolocation");
+	  },
+	  always: function() {
+	    console.log("Done!");
+	  }
+	});
+
 
 	}
 	
