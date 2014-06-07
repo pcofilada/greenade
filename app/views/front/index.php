@@ -22,5 +22,12 @@
 	<option value="11">NOV</option>
 	<option value="12">DEC</option>
   </select>
-  <select id="year-fileter" class="selectpicker">
+  <select id="year-filter" class="selectpicker">
   </select>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	});
+</script>

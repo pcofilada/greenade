@@ -62,7 +62,8 @@ $(document).ready(function(){
 		  				var dDate = new Date(sDate);
 		  				var str = dDate.toString("M yyyy");
 		  				var iMonth = dDate.toString("M");
-		  				console.log('sData : ' + str+ '\n' + iMonth);
+		  				var iYear = dDate.toString("yyyy");
+		  				console.log('sData : ' + str+ '\n' + iMonth+ '\n' + iYear);
 		  				
 		  					if(typeof(month) == 'undefined' || month == 0){
 						  		add_mark(value);
@@ -195,6 +196,19 @@ $(document).ready(function(){
 		return oData;	
 	}
 
+	function initialize_year_filter(){
+		var iYear = new Date().getFullYear();
+		var sTemp = "";
+		var iLast = iYear - 10;
+		console.log('iLast : ' + iLast);
+		for(var x= iYear; x>=iLast;x--){
+			sTemp +="<option value='"+x+"'>"+x+"</option>";
+		}
+		if(sTemp.length > 0){
+			$(sTemp).appendTo('#year-filter')
+		}
+	}		
 	initialize();
+	initialize_year_filter();
 
 });
