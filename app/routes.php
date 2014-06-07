@@ -34,8 +34,10 @@ Route::post('admin/login','AdminController@doLogin');
 Route::get('/', 'HomeController@home');
 
 Route::get('admin-create', function(){
-	return Admin::insert(array(
-	      'username' => 'admin',
-	      'password' => Hash::make('admin2014')
-	));
+	$admin 		= new Admin;
+	$admin->email 	= 'agentp@gorated.ph';
+	$admin->password 	= Hash::make('admin');
+	$admin->save();
+
+	return "Save";
 });

@@ -1,13 +1,20 @@
 <?php
 
 class AdminController extends \BaseController {
-	protected $layout 		= 'layout.admin.index';
+	protected $layout 		= 'layouts.admin.index';
 
-	public function showLogin(){
+	public function index()
+	{
+		return "True";
+	}
+
+	public function showLogin()
+	{
 		return View::make('layouts.admin.login.index');
 	}
 
-	public function doLogin(){
+	public function doLogin()
+	{
 		$rules 				= array(
 							'email'    => 'required',
 							'password' => 'required'

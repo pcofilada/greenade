@@ -20,8 +20,15 @@
   <body>
   <div id="main" class="clearfix">
     <div class="login col-md-12">
-      <form class="form-horizontal col-md-4 clearfix" role="form" action="login" method="POST">
+      <form class="form-horizontal col-md-4 clearfix" role="form" action="/admin/login" method="POST">
         <h3><img src="/assets/images/admin-logo.png" style="width:100px;"/>&nbsp;&nbsp;&nbsp;Admin Login</h3>
+            <?php if($errors->has()){?>
+              <div data-alert class="alert alert-warning">
+                <?php foreach ($errors->all() as $error) { ?>
+                  <li><?php echo $error; ?></li>
+                <?php } ?>
+              </div>
+            <?php } ?>
         <div class="form-group">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-10">
