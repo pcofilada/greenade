@@ -214,6 +214,24 @@
         </div>
       </div>
     </div>
+
+    <div id="map_report" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+             <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title" id="contribute-modalLabel">How Can I Contribute</h2>
+          </div>
+          <div class="modal-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, fugiat, sed, totam vel atque dolorem rem quidem repellat tempore obcaecati molestias incidunt consequuntur culpa sunt quam at et ut expedita!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, blanditiis numquam consequuntur est id libero at. Doloribus eveniet aliquid saepe ullam similique! Hic ipsum molestias nostrum amet enim dicta quod.</p>
+              <p>Consectetur adipisicing elit. Illum, blanditiis numquam consequuntur est id libero at. Doloribus eveniet aliquid saepe ullam similique! Hic ipsum molestias nostrum amet enim dicta quod.</p>
+              <p>Hic ipsum molestias nostrum amet enim dicta quodLorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, blanditiis numquam consequuntur est id libero at. Doloribus eveniet aliquid saepe ullam similique! Hic ipsum molestias nostrum amet enim dicta quod.</p>
+          </div>
+        </div>
+      </div>
+    </div>    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
