@@ -103,8 +103,8 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <input type="submit" class="btn btn-primary" value="UPDATE">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                      <input type="submit" class="btn btn-success" value="UPDATE">
+                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
                     </div>
                   </div>
                 </form>
@@ -136,8 +136,8 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <input type="submit" class="btn btn-primary" value="LOGIN">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                      <input type="submit" class="btn btn-success" value="LOGIN">
+                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
                     </div>
                   </div>
                 </form>
@@ -187,8 +187,8 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <input type="submit" class="btn btn-primary" value="SIGNUP">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                      <input type="submit" class="btn btn-success" value="SIGNUP">
+                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
                     </div>
                   </div>
                 </form>
