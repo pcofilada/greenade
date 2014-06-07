@@ -6,7 +6,6 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"jenssegers/mongodb": "*",
-		"facebook/php-sdk": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
