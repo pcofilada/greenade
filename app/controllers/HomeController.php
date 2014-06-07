@@ -18,14 +18,14 @@ class HomeController extends BaseController {
 
 	public function home()
 	{
-		$reports 					= Report::all();
+		$reports 					= Report::orderBy('created_at','DESC')->get();
 		$trending 					= Report::take(5)->get();
 		if(Session::has('user')){
 			$session 				= Session::get('user');
 			$user 					= User::where('id','=',$session->id);
 			$this->layout->main 			= View::make('front.index')->with('user',$user)->with('reports',$reports);
 		}else{
-			$this->layout->sidebar 		= View::make('layouts.front.sidebar.trending')->with('trending',$trending);
+			$this->layout->sidebar 		= View::make('layouts.front.sidebar.trending')->with('trending',$trending)->with('reports',$reports);
 			$this->layout->main 			= View::make('front.index')->with('reports',$reports);
 		}
 	}

@@ -58,7 +58,8 @@
               </ul>
               </li>
             </ul>
-          <h4>TRENDING REPORT</h4>
+          <h4 class="trending">TRENDING REPORT</h4>
+          <h4 class="newest" style="display: none">NEWEST REPORT</h4>
           <h5>June 7, 2014</h5>
         </div>
       <?php } ?>
