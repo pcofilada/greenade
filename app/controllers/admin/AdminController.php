@@ -5,7 +5,7 @@ class AdminController extends \BaseController {
 
 	public function index()
 	{
-		return "True";
+		$this->layout->main 		= "Main";
 	}
 
 	public function showLogin()

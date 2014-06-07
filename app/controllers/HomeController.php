@@ -18,10 +18,15 @@ class HomeController extends BaseController {
 
 	public function home()
 	{
-		$session 				= Session::get('user');
-		$user 					= User::where('id','=',$session->id);
-		$this->layout->sidebar 		= View::make('layouts.front.sidebar.trending');
-		$this->layout->main 			= View::make('front.index')->with('user',$user);
+		if(Session::has('user')){
+			$session 				= Session::get('user');
+			$user 					= User::where('id','=',$session->id);
+			$this->layout->sidebar 		= View::make('layouts.front.sidebar.trending');
+			$this->layout->main 			= View::make('front.index')->with('user',$user);
+		}else{
+			$this->layout->sidebar 		= View::make('layouts.front.sidebar.trending');
+			$this->layout->main 			= View::make('front.index');
+		}
 	}
 
 	public function doSignup()

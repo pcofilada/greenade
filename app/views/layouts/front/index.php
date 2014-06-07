@@ -56,143 +56,142 @@
     </div>
 
     <!-- Modals -->
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="login-modalLabel">GREENADE LOGIN</h2>
-          </div>
-          <div class="modal-body">
-            <form class="form-horizontal" role="form" action="login" method="POST">
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo $user->email; ?>">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <input type="submit" class="btn btn-primary" value="LOGIN">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="signup-modalLabel">GREENADE SIGNUP</h2>
-          </div>
-          <div class="modal-body">
-            <form class="form-horizontal" role="form" action="/signup" method="POST">
-               <div class="form-group">
-                 <label for="name" class="col-sm-2 control-label">Name</label>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                 </div>
-               </div>
-              <div class="form-group">
-                <label for="mobile" class="col-sm-2 control-label">Mobile</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="09xxxxxxxxx" maxlength="11">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="confirm" class="col-sm-2 control-label">Confirm Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" name="password_confirmation" id="confirm" placeholder="Confirm Password">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <input type="submit" class="btn btn-primary" value="SIGNUP">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-        
+    <?php if (Session::has('user')) { ?>
         <div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="profile-modalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="profile-modalLabel">My Profile</h2>
-          </div>
-          <div class="modal-body">
-            <form class="form-horizontal" role="form" action="/signup" method="POST">
-               <div class="form-group">
-                 <label for="name" class="col-sm-2 control-label">Name</label>
-                 <div class="col-sm-10">
-                   <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="<?php echo $user->name; ?>">
-                 </div>
-               </div>
-              <div class="form-group">
-                <label for="mobile" class="col-sm-2 control-label">Mobile</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="09xxxxxxxxx" maxlength="11" value="<?php echo $user->mobile; ?>">
-                </div>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="profile-modalLabel">My Profile</h2>
               </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo $user->email; ?>">
-                </div>
+              <div class="modal-body">
+                <form class="form-horizontal" role="form" action="/signup" method="POST">
+                   <div class="form-group">
+                     <label for="name" class="col-sm-2 control-label">Name</label>
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control" name="name" id="name" placeholder="Name" value="<?php echo $user->name; ?>">
+                     </div>
+                   </div>
+                  <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="mobile" id="mobile" placeholder="09xxxxxxxxx" maxlength="11" value="<?php echo $user->mobile; ?>">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo $user->email; ?>">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm" class="col-sm-2 control-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password_confirmation" id="confirm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-primary" value="UPDATE">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="confirm" class="col-sm-2 control-label">Confirm Password</label>
-                <div class="col-sm-10">
-                  <input type="password" class="form-control" name="password_confirmation" id="confirm" placeholder="Confirm Password">
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <input type="submit" class="btn btn-primary" value="UPDATE">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+    <?php }else{ ?>
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="login-modalLabel">GREENADE LOGIN</h2>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal" role="form" action="login" method="POST">
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-primary" value="LOGIN">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="signup-modalLabel">GREENADE SIGNUP</h2>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal" role="form" action="/signup" method="POST">
+                   <div class="form-group">
+                     <label for="name" class="col-sm-2 control-label">Name</label>
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                     </div>
+                   </div>
+                  <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="mobile" id="mobile" placeholder="09xxxxxxxxx" maxlength="11">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm" class="col-sm-2 control-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password_confirmation" id="confirm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-primary" value="SIGNUP">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    <?php } ?>
 
     <div class="modal fade" id="contribute-modal" tabindex="-1" role="dialog" aria-labelledby="contribute-modalLabel" aria-hidden="true">
       <div class="modal-dialog">

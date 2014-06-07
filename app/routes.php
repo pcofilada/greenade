@@ -14,6 +14,10 @@
 Route::group(array('prefix' => 'admin','before'=>'admin'), function()
 {
 	Route::get('/','AdminController@index');
+	Route::get('logout', function(){
+		Session::flush();
+		return Redirect::to('/');
+	});
 });
 
 Route::post('signup','HomeController@doSignup');
