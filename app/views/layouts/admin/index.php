@@ -18,7 +18,7 @@
     <![endif]-->
   </head>
   <body>
-  <div id="main" class="clearfix">
+  <div id="main" class="admin clearfix">
     <div class="sidebar col-md-3">
       <div class="logo"><img src="/assets/images/logo.png" alt="" style="width: 100%;"></div>
       <ul class="nav nav-stacked">
