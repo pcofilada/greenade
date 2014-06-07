@@ -43,8 +43,6 @@ $(document).ready(function(){
 				draggable: true,
 				click:function(){
 					$('#map_report').modal('show');
-					//console.log('map report lat : ' +$('#map_report').find('input[type="text"]#lat').length);
-					//console.log('map report long  : ' +$('#map_report').find('input[type="text"]#long').length);
 					$('#map_report').find('input[type="text"]#lat').val(oData.k);
 					$('#map_report').find('input[type="text"]#long').val(oData.A);
 
@@ -54,25 +52,6 @@ $(document).ready(function(){
 				}
 			});
 		}
-
-		
-		/*
-	        google.maps.event.addListener(map, 'click', function(event) {
-	            mapZoom = map.getZoom();
-	            startLocation = event.latLng;
-	            setTimeout("placeMarker()", 600);
-	        });
-	    map.addMarker({
-	        lat: -12.043333,
-		  	lng: -77.028333,
-		  	click:function(){
-		  		console.log('test');
-		  	},
-		  	infoWindow: {
-			  content: '<p>HTML Content</p>'
-			}
-	    });
-		*/
     }
 
 
