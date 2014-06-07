@@ -16,9 +16,15 @@
 			echo $address;
 			 ?></h5>
 			<div class="status">
-				<span><i class="fa fa-smile-o"></i> 30</span>
-				<span><i class="fa fa-frown-o"></i> 5</span>
-				<span><i class="fa fa-comments-o"></i> 92</span>
+				<?php if (Session::has('user')) { ?>
+					<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
+					<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
+					<a href=""><span><i class="fa fa-comments-o"></i> 92</span></a>
+				<?php }else{ ?>
+					<a href="#" data-toggle="modal" data-target="#login-modal"><span><i class="fa fa-smile-o"></i> 30</span></a>
+					<a href="#" data-toggle="modal" data-target="#login-modal"><span><i class="fa fa-frown-o"></i> 5</span></a>
+					<a href="#" data-toggle="modal" data-target="#login-modal"><span><i class="fa fa-comments-o"></i> 92</span></a>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
