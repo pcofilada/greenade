@@ -28,10 +28,8 @@
 			 			?>
 					 </th>
 					<td>
-						<div class="icons right">
-						<a href="/admin/reports/<?php echo $report->id; ?>/edit"><i class="fa fa-pencil-square-o"></i> Edit</a> |
-				                       <form class="delete" action="" method="POST">
-							<i class="fa fa-trash-o"></i><input type="submit" value="Delete" />
+						<div class="icons">
+				                       <form class="delete" action="" method="POST"><input type="submit" value="Solve" />
 				                       </form>
 						</div>
 					</td>
