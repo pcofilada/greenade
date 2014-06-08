@@ -52,6 +52,8 @@ Route::get('admin/login',function(){
 Route::post('admin/login','AdminController@doLogin');
 Route::get('/', 'HomeController@home');
 
+Route::mobile('mobile','MobileController');
+
 Route::get('admin-create', function(){
 	$admin 		= new Admin;
 	$admin->email 	= 'admin@greenade.ph';

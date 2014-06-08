@@ -92,7 +92,7 @@
                 <h2 class="modal-title" id="login-modalLabel">GREENADE LOGIN</h2>
               </div>
               <div class="modal-body">
-                <form class="form-horizontal" role="form" action="login" method="POST">
+                <form class="form-horizontal" role="form" action="mobile" method="POST">
                   <div class="form-group">
                     <label for="email" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-10">
@@ -169,7 +169,7 @@
           </div>
         </div>
     <?php } ?>
-    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
