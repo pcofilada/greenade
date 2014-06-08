@@ -29,6 +29,40 @@
         <i class="fa fa-plus-square" ></i> Add Report</a></div>
     </header>
     <?php echo (isset($main) ? $main : null); ?>
+
+        <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login-modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="login-modalLabel">GREENADE LOGIN</h2>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal" role="form" action="login" method="POST">
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-success" value="LOGIN">
+                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
