@@ -41,7 +41,7 @@
       </div>
     </header>
   <div id="main" class="admin clearfix">
-    <div class="sidebar col-md-2" style="background-color:#ececec">
+    <div class="sidebar col-md-2 admin-sidebar">
       <ul class="nav nav-pills nav-stacked">
         <li><a href="/admin"><i class="fa fa-map-marker"></i> Dasboard</a></li>
         <li><a href="/admin/users"><i class="fa fa-file-text-o"></i> Users</a></li>

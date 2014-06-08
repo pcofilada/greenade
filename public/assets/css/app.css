@@ -60,6 +60,7 @@ header a {
 
 #main .sidebar .nav.nav-pills li a {
 	font-size: 18px;
+	color: #3d3d3d;
 }
 
 /*Date*/
@@ -306,4 +307,10 @@ header .nav .open>a {
 }
 div.main-content.col-md-10 {
 padding: 20px;
+}
+.admin-sidebar{
+	background-color:#ececec
+}
+.admin-sidebar > a{
+	color: black;
 }
