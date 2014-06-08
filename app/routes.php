@@ -26,6 +26,7 @@ Route::group(array('prefix' => 'user/{name}'), function()
 	Route::get('/','UserController@home');
 	Route::get('reports','UserController@reports');
 	Route::post('report','UserController@report');
+	Route::post('comment','UserController@comments');
 	Route::get('logout', function(){
 		Session::flush();
 		return Redirect::to('/');
