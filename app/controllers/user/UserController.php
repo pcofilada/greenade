@@ -66,4 +66,16 @@ class UserController extends BaseController {
 		return Redirect::back();
 		}
 	}
+
+	public function comments()
+	{
+		$session 			= Session::get('user');
+		$comment 			= new Comment;
+		$comment->user 		= $session->id;
+		$comment->report 		= Input::get('report');
+		$comment->comment 	= e(Input::get('comment'));
+		$comment->save();
+
+		return Redirect::back();
+	}
 }

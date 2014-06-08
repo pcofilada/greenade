@@ -50,7 +50,8 @@
 						                   <div class="form-group">
 						                     <label for="name" class="col-sm-2 control-label">Comment</label>
 						                     <div class="col-sm-10">
-						                       <textarea name="" id="" cols="55" rows="5"></textarea>
+						                       <input type="hidden" name="report" value="<?php echo $myreport->id; ?>">
+						                       <textarea name="comment" id="comment" cols="55" rows="5" placeholder="Add comment here!"></textarea>
 						                     </div>
 						                   </div>
 						                  <div class="form-group">
@@ -104,7 +105,8 @@
 						                   <div class="form-group">
 						                     <label for="name" class="col-sm-2 control-label">Comment</label>
 						                     <div class="col-sm-10">
-						                       <textarea name="" id="" cols="55" rows="5"></textarea>
+						                     	<input type="hidden" name="report" value="<?php echo $newest->id; ?>">
+						                       <textarea name="comment" id="comment" cols="55" rows="5" placeholder="Add comment here!"></textarea>
 						                     </div>
 						                   </div>
 						                  <div class="form-group">
@@ -158,7 +160,8 @@
 						                   <div class="form-group">
 						                     <label for="name" class="col-sm-2 control-label">Comment</label>
 						                     <div class="col-sm-10">
-						                       <textarea name="" id="" cols="55" rows="5"></textarea>
+						                     	<input type="hidden" name="report" value="<?php echo $trending->id; ?>">
+						                       <textarea name="comment" id="comment" cols="55" rows="5" placeholder="Add comment here!"></textarea>
 						                     </div>
 						                   </div>
 						                  <div class="form-group">
