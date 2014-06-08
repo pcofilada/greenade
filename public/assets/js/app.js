@@ -65,7 +65,6 @@ $(document).ready(function(){
 		  				var iYear = dDate.toString("yyyy");
 		  				
 		  					if(typeof(month) == 'undefined' || month == 0 ){
-		  							console.log('if');
 		  							if(year == null){
 								  		add_mark(value);
 								  	}else if(year == iYear){
@@ -74,7 +73,6 @@ $(document).ready(function(){
 
 							  	//}
 						  	}else{
-						  		console.log('else')
 						  		if(iMonth == month && iYear == year){
 						  			add_mark(value);
 						  		}
@@ -109,7 +107,6 @@ $(document).ready(function(){
 		var iMonth = $('#date-filter').val();
 		var iYear = $('#year-filter').val();
 		map.removeMarkers();
-		console.log('month : ' + iMonth + ' year  : ' + iYear);
 		draw_markers(obj, iMonth, iYear);
 
 
@@ -212,7 +209,6 @@ $(document).ready(function(){
 		var iYear = new Date().getFullYear();
 		var sTemp = "";
 		var iLast = iYear - 10;
-		console.log('iLast : ' + iLast);
 		for(var x= iYear; x>=iLast;x--){
 			sTemp +="<option value='"+x+"'>"+x+"</option>";
 		}
