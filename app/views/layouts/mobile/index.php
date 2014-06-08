@@ -20,7 +20,13 @@
   <body class="mobile">
     <header class="clearfix">
         <div class="pull-left"><img src="/assets/images/user-logo.png" alt="" style="width: 180px; height: 60px;"></div>
-        <div class="pull-right"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report"><i class="fa fa-plus-square" ></i> Add Report</a></div>
+        <div class="pull-right">
+        <?php if (Session::has('user')) { ?>
+            <a href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report">
+        <?php }else{ ?>
+            <a href="#" class="btn btn-default" data-toggle="modal" data-target="#login">
+        <?php } ?>
+        <i class="fa fa-plus-square" ></i> Add Report</a></div>
     </header>
     <?php echo (isset($main) ? $main : null); ?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
