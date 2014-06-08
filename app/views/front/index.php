@@ -24,10 +24,3 @@
   </select>
   <select id="year-filter" class="selectpicker">
   </select>
-
-
-<script type="text/javascript">
-	$(document).ready(function(){
-
-	});
-</script>

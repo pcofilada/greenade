@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 
 
-  	function draw_markers(obj, month){
+  	function draw_markers(obj, month, year){
 	  	if(typeof(obj) !='undefined'){	  		
 
 		  	$.each(obj, function(index , value){
@@ -65,10 +65,10 @@ $(document).ready(function(){
 		  				var iYear = dDate.toString("yyyy");
 		  				console.log('sData : ' + str+ '\n' + iMonth+ '\n' + iYear);
 		  				
-		  					if(typeof(month) == 'undefined' || month == 0){
+		  					if(typeof(month) == 'undefined' || month == 0 ){
 						  		add_mark(value);
 						  	}else{
-						  		if(iMonth == month){
+						  		if(iMonth == month && iYear == year){
 						  			add_mark(value);
 						  		}
 						  	}
@@ -98,10 +98,14 @@ $(document).ready(function(){
 	}
 
 
-	$('#date-filter').change(function(e){
-		console.log('change the val ' + $(this).val());
+	$('#date-filter, #year-filter' ).change(function(e){
+		var iMonth = $('#date-filter').val();
+		var iYear = $('#year-filter').val();
 		map.removeMarkers();
-		draw_markers(obj, $(this).val());
+
+		draw_markers(obj, iMonth, iYear);
+
+
 	});
 
 //gmap events
