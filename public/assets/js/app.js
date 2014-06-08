@@ -280,6 +280,6 @@ $(window).load(function(){
 	var size = $(window).width();
 
 	if(size == 768){
-		window.location.href = 'http://m.greenade.dev';
+		window.location.href = 'http://m.greenade.gorated.com';
 	}
 });
