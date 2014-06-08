@@ -38,7 +38,19 @@ $(document).ready(function(){
 	  }
 	});
 
-
+	GMaps.geocode({
+	  address: $('#address').val(),
+	  callback: function(results, status) {
+	    if (status == 'OK') {
+	      var latlng = results[0].geometry.location;
+	      map.setCenter(latlng.lat(), latlng.lng());
+	      map.addMarker({
+	        lat: latlng.lat(),
+	        lng: latlng.lng()
+	      });
+	    }
+	  }
+	});
 
 
 
@@ -215,7 +227,52 @@ $(document).ready(function(){
 		if(sTemp.length > 0){
 			$(sTemp).appendTo('#year-filter')
 		}
-	}		
+	}
+
+
+
+	function search_place(sPlace){
+		if(typeof(sPlace) != 'undefined'){
+			var sUrl = 'http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=';
+			var sResult = sUrl+sPlace;
+			var oData = {};
+			$.getJSON(sResult , function( sData){
+				get_data(sData);
+			});
+			return oData;
+		}
+	}
+	$('#search_btn').click(function(e){
+		e.preventDefault();
+		e.stopPropagation();
+
+		var sSearched = $('#address').val();
+		var oData = search_place(sSearched);
+	});
+
+	function get_data(sData){
+		if(typeof(sData) !=='undefined'){
+			console.log('sdata results : ' + JSON.stringify(sData.results[0]));
+		}
+		var oResults = sData.results[0];
+			$.each(oResults , function(index, value){
+				if(index == 'geometry'){
+					var oLoc = value.location;
+					set_map_location(oLoc);
+				}
+			});
+		//var oLngLat = JSON.stringify(sData.results[0].geometry.location;
+		//set map location
+	//	
+	}
+	function set_map_location(oConfig){
+		if(typeof(oConfig) !='undefined'){
+			var fLong = oConfig.lng;
+			var fLat = oConfig.lat;
+			map.setCenter(fLat,fLong)
+		}
+	}
+
 	initialize();
 	initialize_year_filter();
 

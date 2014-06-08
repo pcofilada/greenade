@@ -1,7 +1,8 @@
 <form method="post" id="geocoding_form" class="col-md-10">
-	<div class="col-sm-offset-2 col-md-6 input"><input id="pac-input address" class="controls" type="text" placeholder="Search" name="address"></div>
-	<div class="col-md-1"><input type="submit" class="controls-button btn btn-success" value="GO!" ></div>
-</form>
+
+<div class="col-sm-offset-2 col-md-6 input"><input id="address" class="controls" type="text" placeholder="Search" name="address"></div>
+<div class="col-md-1"><input id="search_btn" type="submit" class="controls-button btn btn-success" value="GO!" ></div>
+</form> 
 
 <div class="col-sm-offset-2 col-md-6">
 	<div class="col-md-3">
@@ -30,9 +31,3 @@
 </div>
 <textarea id="map_data" class="hidden"><?php echo str_replace('\/','/',json_encode($reports)); ?></textarea>
 <div id="map" style="width: 100%; height: 100%;"></div>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-
-	});
-</script>
