@@ -6,6 +6,7 @@ class MobileController extends BaseController {
 
 	public function home()
 	{
-		$this->layout->main 			= View::make('mobile.index');
+		$reports 				= Report::orderBy('created_at','DESC')->get();
+		$this->layout->main 			= View::make('mobile.index')->with('reports',$reports);
 	}
 }
