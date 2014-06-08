@@ -43,10 +43,10 @@
   <div id="main" class="admin clearfix">
     <div class="sidebar col-md-2 admin-sidebar">
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="/admin"><i class="fa fa-map-marker"></i> Dasboard</a></li>
-        <li><a href="/admin/users"><i class="fa fa-file-text-o"></i> Users</a></li>
-        <li><a href=""><i class="fa fa-comment-o"></i> Stats</a></li>
-        <li><a href="/admin/reports"><i class="fa fa-envelope-o"></i>  Reports</a></li>
+        <li><a href="/admin" ><i class="fa fa-tachometer icon-admin"></i> Dasboard</a></li>
+        <li><a href="/admin/users"><i class="fa fa-users icon-admin"></i> Users</a></li>
+        <li><a href="/admin/reports"><i class="fa fa-file-text-o icon-admin"></i>  Reports</a></li>
+        <li><a href=""><i class="fa fa-comment-o icon-admin"></i> Stats</a></li>
       </ul>
     </div>
     <div class="main-content col-md-10">
