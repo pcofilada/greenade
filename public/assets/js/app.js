@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-
 	$("html").niceScroll({cursorcolor:"#397F43"});
 	$(".user .sidebar .reports .tab-content").niceScroll({cursorcolor:"#397F43"});
 	$('#newest').click(function(){
@@ -276,4 +274,12 @@ $(document).ready(function(){
 	initialize();
 	initialize_year_filter();
 
+});
+
+$(window).load(function(){
+	var size = $(window).width();
+
+	if(size == 768){
+		window.location.href = 'http://m.greenade.dev';
+	}
 });
