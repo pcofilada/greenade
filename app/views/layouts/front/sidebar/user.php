@@ -35,9 +35,35 @@
 						echo $address;
 						 ?></h5>
 						<div class="status">
-								<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
-								<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
-								<a href=""><span><i class="fa fa-comments-o"></i> 92</span></a>
+							<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
+							<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
+							<a href="#" data-toggle="modal" data-target="#myreport-<?php echo $myreport->title ?>"><span><i class="fa fa-comments-o"></i> 92</span></a>
+					            	<div class="modal fade" id="myreport-<?php echo $myreport->title ?>" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel" aria-hidden="true">
+						          <div class="modal-dialog">
+						            <div class="modal-content">
+						              <div class="modal-header">
+						                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						                <h2 class="modal-title" id="signup-modalLabel">Add Comment on <?php echo $myreport->title ?></h2>
+						              </div>
+						              <div class="modal-body">
+						                <form class="form-horizontal" role="form" action="/signup" method="POST">
+						                   <div class="form-group">
+						                     <label for="name" class="col-sm-2 control-label">Comment</label>
+						                     <div class="col-sm-10">
+						                       <textarea name="" id="" cols="55" rows="5"></textarea>
+						                     </div>
+						                   </div>
+						                  <div class="form-group">
+						                    <div class="col-sm-offset-2 col-sm-10">
+						                      <input type="submit" class="btn btn-success" value="Comment">
+						                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
+						                    </div>
+						                  </div>
+						                </form>
+						              </div>
+						            </div>
+						          </div>
+						        </div>			
 						</div>
 					</div>
 				</div>
@@ -63,9 +89,35 @@
 						echo $address;
 						 ?></h5>
 						<div class="status">
-								<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
-								<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
-								<a href=""><span><i class="fa fa-comments-o"></i> 92</span></a>
+							<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
+							<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
+							<a href="#" data-toggle="modal" data-target="#newest-<?php echo $newest->title ?>"><span><i class="fa fa-comments-o"></i> 92</span></a>
+					            	<div class="modal fade" id="newest-<?php echo $newest->title ?>" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel" aria-hidden="true">
+						          <div class="modal-dialog">
+						            <div class="modal-content">
+						              <div class="modal-header">
+						                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						                <h2 class="modal-title" id="signup-modalLabel">Add Comment on <?php echo $newest->title ?></h2>
+						              </div>
+						              <div class="modal-body">
+						                <form class="form-horizontal" role="form" action="/signup" method="POST">
+						                   <div class="form-group">
+						                     <label for="name" class="col-sm-2 control-label">Comment</label>
+						                     <div class="col-sm-10">
+						                       <textarea name="" id="" cols="55" rows="5"></textarea>
+						                     </div>
+						                   </div>
+						                  <div class="form-group">
+						                    <div class="col-sm-offset-2 col-sm-10">
+						                      <input type="submit" class="btn btn-success" value="Comment">
+						                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
+						                    </div>
+						                  </div>
+						                </form>
+						              </div>
+						            </div>
+						          </div>
+						        </div>
 						</div>
 					</div>
 				</div>
@@ -91,10 +143,36 @@
 						echo $address;
 						 ?></h5>
 						<div class="status">
-								<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
-								<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
-								<a href=""><span><i class="fa fa-comments-o"></i> 92</span></a>
-						</div>
+							<a href=""><span><i class="fa fa-smile-o"></i> 30</span></a>
+							<a href=""><span><i class="fa fa-frown-o"></i> 5</span></a>
+							<a href="#" data-toggle="modal" data-target="#trending-<?php echo $trending->title ?>"><span><i class="fa fa-comments-o"></i> 92</span></a>
+					            	<div class="modal fade" id="trending-<?php echo $trending->title ?>" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel" aria-hidden="true">
+						          <div class="modal-dialog">
+						            <div class="modal-content">
+						              <div class="modal-header">
+						                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						                <h2 class="modal-title" id="signup-modalLabel">Add Comment on <?php echo $trending->title ?></h2>
+						              </div>
+						              <div class="modal-body">
+						                <form class="form-horizontal" role="form" action="/signup" method="POST">
+						                   <div class="form-group">
+						                     <label for="name" class="col-sm-2 control-label">Comment</label>
+						                     <div class="col-sm-10">
+						                       <textarea name="" id="" cols="55" rows="5"></textarea>
+						                     </div>
+						                   </div>
+						                  <div class="form-group">
+						                    <div class="col-sm-offset-2 col-sm-10">
+						                      <input type="submit" class="btn btn-success" value="Comment">
+						                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
+						                    </div>
+						                  </div>
+						                </form>
+						              </div>
+						            </div>
+						          </div>
+						        </div>						
+					        </div>
 					</div>
 				</div>
 			<?php } ?>
