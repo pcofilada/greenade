@@ -20,7 +20,6 @@ class UserController extends BaseController {
 		$reports 			= Report::orderBy('created_at','DESC')->get();
 		$myreport 			= Report::where('user','=',$user->id)->get();
 		$trending 			= Report::take(5)->get();
-		$comments 			= Comment::where('report','=',$reports->id);
 		$this->layout->sidebar 	= View::make('layouts.front.sidebar.user')->with('user',$user)->with('reports',$reports)->with('myreport',$myreport)->with('trending',$trending)->with('active',$active);
 		$this->layout->main 		= View::make('front.index')->with('user',$user)->with('reports',$reports);
 	}
