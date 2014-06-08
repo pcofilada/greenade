@@ -4,10 +4,12 @@ $(document).ready(function(){
 	$('#newest').click(function(){
 		$('.trending').css({display:'none'});
 		$('.newest').css({display:'block'});
+		$.initialize_got_to();
 	});
 	$('#trending').click(function(){
 		$('.trending').css({display:'block'});
 		$('.newest').css({display:'none'});
+		$.initialize_got_to();
 	});
 
 	var sUrl = window.location.host;
@@ -272,16 +274,20 @@ $(document).ready(function(){
 		}
 	}
 
-	$('.title').bind('click', function(e){
-		var fLong = $(this).attr('longitude');
-		var fLat = $(this).attr('latitude');
+	$.initialize_got_to = function(){
+		$('.title').bind('click', function(e){
+			var fLong = $(this).attr('longitude');
+			var fLat = $(this).attr('latitude');
 
-		console.log('long : ' + fLong+ 'iLat : ' + fLat );
-		if(typeof(fLong) !='undefined' && typeof(fLat) != 'undefined'){
-			map.setCenter(fLat,fLong)
-		}
+			console.log('long : ' + fLong+ 'iLat : ' + fLat );
+			if(typeof(fLong) !='undefined' && typeof(fLat) != 'undefined'){
+				map.setCenter(fLat,fLong)
+			}
 
-	});
+		});
+	}
+
+	$.initialize_got_to();
 
 	initialize();
 	initialize_year_filter();
