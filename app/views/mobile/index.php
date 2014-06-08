@@ -1,6 +1,6 @@
 <div class="filters clearfix">
 	<form method="post" id="geocoding_form" class="col-sm-6">
-	<div class="col-sm-7 input"><input id="address" class="controls controls-select" type="text" placeholder="Search" name="address"></div>
+	<div class="col-sm-7 input"><input id="address" class="controls form-control controls-select" type="text" placeholder="Search" name="address"></div>
 	<div class="col-sm-3"><input id="search_btn" type="submit" class="controls-button btn btn-success" value="GO!" ></div>
 	</form> 
 
