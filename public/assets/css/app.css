@@ -304,3 +304,6 @@ header .nav .open>a {
 .user .sidebar .reports .tab-pane h3 {
 	padding-left: 10px;
 }
+div.main-content.col-md-10 {
+padding: 20px;
+}

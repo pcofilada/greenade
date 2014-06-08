@@ -9,6 +9,28 @@
 			<canvas id="mostDiscussed" height="300" width="300"></canvas>
 		</div>
 	</div>
+	<br />
+	<hr />
+	<br />
+	<div class="row">
+		<div class="col-md-4" style="border-width: 1px; border-style: solid; border-color: rgb(238, 238, 238);">
+			<h4>Latest Report</h4>
+			<div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h4>New User</h4>
+		</div>
+		<div class="col-md-4">
+			<h4>Latest Comment</h4>
+		</div>
+	</div>
+
+
+
+
+
+
 	<script>
 		var barChartData = {
 			labels : ["Patrick","Dyesi","Arianne","Janine","May"],

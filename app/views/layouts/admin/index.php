@@ -41,16 +41,15 @@
       </div>
     </header>
   <div id="main" class="admin clearfix">
-    <div class="sidebar col-md-3">
+    <div class="sidebar col-md-2" style="background-color:#ececec">
       <ul class="nav nav-pills nav-stacked">
-        <li><a href=""><i class="fa fa-map-marker"></i> Dasboard</a></li>
-        <li><a href=""><i class="fa fa-file-text-o"></i> Users</a></li>
+        <li><a href="/admin"><i class="fa fa-map-marker"></i> Dasboard</a></li>
+        <li><a href="/admin/users"><i class="fa fa-file-text-o"></i> Users</a></li>
         <li><a href=""><i class="fa fa-comment-o"></i> Stats</a></li>
-        <li><a href=""><i class="fa fa-envelope-o"></i>  Reports</a></li>
+        <li><a href="/admin/reports"><i class="fa fa-envelope-o"></i>  Reports</a></li>
       </ul>
-      
     </div>
-    <div class="main-content col-md-9">
+    <div class="main-content col-md-10">
       <?php echo (isset($main) ? $main : null); ?>
     </div>
   </div>
