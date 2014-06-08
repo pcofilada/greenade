@@ -1,5 +1,5 @@
 <?php foreach ($trending as $trending) { ?>
-	<div class="trending clearfix">
+	<div class="trending clearfix" style="display: none;">
 		<div class="image col-md-4">
 			<img src="<?php echo $trending['image'][0]; ?>" alt="" style="width: 100%; height: 70px; ">
 		</div>
@@ -31,7 +31,7 @@
 <?php } ?>
 
 <?php foreach ($reports as $report) { ?>
-	<div class="newest clearfix" style="display: none;">
+	<div class="newest clearfix">
 		<div class="image col-md-4">
 			<img src="<?php echo $report['image'][0]; ?>" alt="" style="width: 100%; height: 70px; ">
 		</div>
