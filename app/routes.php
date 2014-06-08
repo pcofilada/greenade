@@ -11,6 +11,13 @@
 |
 */
 
+Route::group(array('domain' => 'm.' . $_SERVER["SERVER_NAME"] ), function()
+{
+	Route::get('/',function(){
+		return "true";
+	});
+});
+
 Route::group(array('prefix' => 'admin','before'=>'admin'), function()
 {
 	Route::get('/','AdminController@index');
