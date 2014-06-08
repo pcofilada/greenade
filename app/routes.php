@@ -13,9 +13,7 @@
 
 Route::group(array('domain' => 'm.greenade.gorated.com'), function()
 {
-	Route::get('/',function(){
-		return View::make('mobile.index');
-	});
+	Route::get('/','MobileController@home');
 });
 
 Route::group(array('prefix' => 'admin','before'=>'admin'), function()
