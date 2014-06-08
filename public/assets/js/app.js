@@ -280,7 +280,7 @@ $(window).load(function(){
 	var size = $(window).width();
 	var location = window.location.href;
 
-	if(size <= 768 && location == "http://greenade.gorated.com/"){
-		window.location.href = 'http://m.greenade.gorated.com';
+	if(size <= 768 && location == "http://greenade.patrickofilada.com/"){
+		window.location.href = 'http://m.greenade.patrickofilada.com';
 	}
 });
