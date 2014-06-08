@@ -100,7 +100,7 @@ $(document).ready(function(){
 		sDate =  sDate.split(' ')[0];
 		var dDate = new Date(sDate);
 		var str = dDate.toString("MMM dd yyyy");
-		if(typeof(sImg) !='undefined' ||sImg.length > 0 || sImg !=""){
+		if(typeof(sImg) !='undefined' || sImg !=""){
 			map.addMarker({
 				lat: iLat,
 				lng: iLong,
@@ -153,6 +153,7 @@ $(document).ready(function(){
 			  	initialize(latLng , modal_map_global);
 			  },
 			  dragend: function(e){
+			  	e.trigger('click');
 			  	var latLng = e.latLng;
 			  	var fLat = latLng.k;
 			  	var fLng = latLng.A;
