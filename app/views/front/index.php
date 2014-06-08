@@ -8,7 +8,7 @@
 
 
   <select id="date-filter" class="selectpicker">
-	<option value="0"> -- ALL -- </option>
+	<option value="0"> ALL </option>
 	<option value="1">JAN</option>
 	<option value="2">FEB </option>
 	<option value="3">MAR</option>
