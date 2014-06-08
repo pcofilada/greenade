@@ -263,6 +263,7 @@ $(document).ready(function(){
 				}
 			});
 	}
+
 	function set_map_location(oConfig){
 		if(typeof(oConfig) !='undefined'){
 			var fLong = oConfig.lng;
@@ -270,6 +271,15 @@ $(document).ready(function(){
 			map.setCenter(fLat,fLong)
 		}
 	}
+
+	$('.title').bind('click', function(e){
+		var fLong = $(this).attr('longitude');
+		var fLat = $(this).attr('latitude');
+
+		console.log('long : ' + fLong+ 'iLat :' + fLat )
+		map.setCenter(fLat,fLong)
+
+	});
 
 	initialize();
 	initialize_year_filter();

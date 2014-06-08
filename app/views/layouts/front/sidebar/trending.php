@@ -4,7 +4,7 @@
 			<img src="<?php echo $trending['image'][0]; ?>" alt="" style="width: 100%; height: 70px; ">
 		</div>
 		<div class="info col-md-8">
-			<h4 class="title" longitude="<?php echo $trending->long; ?>" latitude="<?php $trending->lat ?>"><?php echo $trending->title; ?></h4>
+			<h4 class="title data" longitude="<?php echo $trending->long; ?>" latitude="<?php echo $trending->lat ?>"><?php echo $trending->title; ?></h4>
 			<h5 class="location"><?php 
 			$url 		= "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$trending->lat.",".$trending->long."&sensor=false"; 
 
