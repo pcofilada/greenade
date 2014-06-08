@@ -36,7 +36,7 @@
 			<img src="<?php echo $report['image'][0]; ?>" alt="" style="width: 100%; height: 70px; ">
 		</div>
 		<div class="info col-md-8">
-			<h4 class="title"><?php echo $report->title; ?></h4>
+			<h4 class="title" longitude="<?php echo $trending->long; ?>" latitude="<?php echo $trending->lat ?>"><?php echo $report->title; ?></h4>
 			<h5 class="location"><?php 
 			$url 		= "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$report->lat.",".$report->long."&sensor=false"; 
 

@@ -276,8 +276,10 @@ $(document).ready(function(){
 		var fLong = $(this).attr('longitude');
 		var fLat = $(this).attr('latitude');
 
-		console.log('long : ' + fLong+ 'iLat :' + fLat )
-		map.setCenter(fLat,fLong)
+		console.log('long : ' + fLong+ 'iLat : ' + fLat );
+		if(typeof(fLong) !='undefined' && typeof(fLat) != 'undefined'){
+			map.setCenter(fLat,fLong)
+		}
 
 	});
 
