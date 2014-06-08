@@ -54,7 +54,7 @@ Route::get('/', 'HomeController@home');
 
 Route::get('admin-create', function(){
 	$admin 		= new Admin;
-	$admin->email 	= 'agentp@gorated.ph';
+	$admin->email 	= 'admin@greenade.ph';
 	$admin->password 	= Hash::make('admin');
 	$admin->save();
 
