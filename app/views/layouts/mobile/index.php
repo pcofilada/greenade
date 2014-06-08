@@ -19,7 +19,7 @@
   </head>
   <body class="mobile">
     <header class="clearfix">
-        <div class="pull-left"><img src="/assets/images/logo.png" alt="" style="width: 180px; height: 60px;"></div>
+        <div class="pull-left"><img src="/assets/images/user-logo.png" alt="" style="width: 180px; height: 60px;"></div>
         <div class="pull-right"><a href="#" class="btn btn-default" data-toggle="modal" data-target="#map_report"><i class="fa fa-plus-square" ></i> Add Report</a></div>
     </header>
     <?php echo (isset($main) ? $main : null); ?>
