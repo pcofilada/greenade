@@ -80,8 +80,6 @@ $(document).ready(function(){
 								  	}else if(year == iYear){
 								  		add_mark(value)
 								  	}
-
-							  	//}
 						  	}else{
 						  		if(iMonth == month && iYear == year){
 						  			add_mark(value);
@@ -98,6 +96,10 @@ $(document).ready(function(){
 		var sImg = value.image[0];
 		var iLat = value.lat;
 		var iLong = value.long;
+		var sDate = value.created_at;
+		sDate =  sDate.split(' ')[0];
+		var dDate = new Date(sDate);
+		var str = dDate.toString("MMM dd yyyy");
 		if(typeof(sImg) !='undefined' ||sImg.length > 0 || sImg !=""){
 			map.addMarker({
 				lat: iLat,
@@ -106,7 +108,7 @@ $(document).ready(function(){
 				click: function(e) {
 				},
 				infoWindow: {
-					content: "<div style='height:auto; max-width:400px; min-width:300px;'><div style='width:400px; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p><p>"+value.created_at+"month >>> </p></div>"
+					content: "<div style='height:auto; max-width:400px; min-width:300px;'><div style='width:400px; height:200px; overflow: hidden;'><img src='"+sImg +"' height='auto' width='100%'></div><h4>"+value.title+"</h4><p>"+value.description+"</p><p><small>"+str+" </p></small></div>"
 				}
 			});
 		}
@@ -259,9 +261,6 @@ $(document).ready(function(){
 					set_map_location(oLoc);
 				}
 			});
-		//var oLngLat = JSON.stringify(sData.results[0].geometry.location;
-		//set map location
-	//	
 	}
 	function set_map_location(oConfig){
 		if(typeof(oConfig) !='undefined'){
