@@ -262,14 +262,41 @@ header .nav .open>a {
 .controls {
 	position: absolute;
 	z-index: 999;
-    	margin-top: 16px;
+    margin-top: 16px;
 	border: 1px solid transparent;
-    	border-radius: 2px 0 0 2px;
-    	box-sizing: border-box;
-    	-moz-box-sizing: border-box;
-    	height: 32px;
-    	outline: none;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	width: 550px;
+}
+.controls-button {
+	position: absolute;
+	z-index: 999;
+    margin-top: 16px;
+	border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	left: 250%;
+}
+.controls-select {
+	position: absolute;
+	z-index: 999;
+    margin-bottom: 16px;
+	border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	bottom:0;
 }
 
 #pac-input {
@@ -313,4 +340,7 @@ padding: 20px;
 }
 .admin-sidebar > a{
 	color: black;
+}
+div.col-sm-offset-2.col-md-6 {
+top: 100%;
 }
