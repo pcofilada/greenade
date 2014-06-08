@@ -1,10 +1,10 @@
-<form method="post" id="geocoding_form" class="col-md-10">
+<form method="post" id="geocoding_form" class="col-md-6">
 
-<div class="col-sm-offset-2 col-md-6 input"><input id="address" class="controls" type="text" placeholder="Search" name="address"></div>
-<div class="col-md-1"><input id="search_btn" type="submit" class="controls-button btn btn-success" value="GO!" ></div>
+<div class="col-md-6 input"><input id="address" class="controls" type="text" placeholder="Search" name="address"></div>
+<div class="col-md-3"><input id="search_btn" type="submit" class="controls-button btn btn-success" value="GO!" ></div>
 </form> 
 
-<div class="col-sm-offset-2 col-md-6">
+<div class="col-md-6">
 	<div class="col-md-3">
 	  <select id="date-filter" class="selectpicker form-control controls-select">
 		<option value="0"> -- ALL -- </option>
