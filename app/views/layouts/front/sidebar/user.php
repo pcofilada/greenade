@@ -46,7 +46,7 @@
 						                <h2 class="modal-title" id="signup-modalLabel">Add Comment on <?php echo $myreport->title ?></h2>
 						              </div>
 						              <div class="modal-body">
-						                <form class="form-horizontal" role="form" action="/signup" method="POST">
+						                <form class="form-horizontal" role="form" action="/user/<?php echo $user->name; ?>/comment" method="POST">
 						                   <div class="form-group">
 						                     <label for="name" class="col-sm-2 control-label">Comment</label>
 						                     <div class="col-sm-10">
@@ -101,7 +101,7 @@
 						                <h2 class="modal-title" id="signup-modalLabel">Add Comment on <?php echo $newest->title ?></h2>
 						              </div>
 						              <div class="modal-body">
-						                <form class="form-horizontal" role="form" action="/signup" method="POST">
+						                <form class="form-horizontal" role="form" action="/user/<?php echo $user->name; ?>/comment" method="POST">
 						                   <div class="form-group">
 						                     <label for="name" class="col-sm-2 control-label">Comment</label>
 						                     <div class="col-sm-10">
@@ -156,7 +156,7 @@
 						                <h2 class="modal-title" id="signup-modalLabel">Add Comment on <?php echo $trending->title ?></h2>
 						              </div>
 						              <div class="modal-body">
-						                <form class="form-horizontal" role="form" action="/signup" method="POST">
+						                <form class="form-horizontal" role="form" action="/user/<?php echo $user->name; ?>/comment" method="POST">
 						                   <div class="form-group">
 						                     <label for="name" class="col-sm-2 control-label">Comment</label>
 						                     <div class="col-sm-10">
