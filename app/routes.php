@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(array('domain' => 'm.greenade.gorated.com'), function()
+Route::group(array('domain' => 'm.greenade.patrickofilada.com'), function()
 {
 	Route::get('/','MobileController@home');
 });
