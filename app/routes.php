@@ -11,10 +11,10 @@
 |
 */
 
-Route::group(array('domain' => 'm.' . $_SERVER["SERVER_NAME"] ), function()
+Route::group(array('domain' => 'm.greenade.gorated.com'), function()
 {
 	Route::get('/',function(){
-		return "true";
+		return View::make('mobile.index');
 	});
 });
 
