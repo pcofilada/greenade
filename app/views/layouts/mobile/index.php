@@ -58,11 +58,62 @@
                     </div>
                   </div>
                 </form>
+                <a href="#" data-toggle="modal" data-target="#signup">SIGN UP</a>
               </div>
             </div>
           </div>
         </div>
 
+        <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup-modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="signup-modalLabel">GREENADE SIGNUP</h2>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal" role="form" action="/signup" method="POST">
+                   <div class="form-group">
+                     <label for="name" class="col-sm-2 control-label">Name</label>
+                     <div class="col-sm-10">
+                       <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                     </div>
+                   </div>
+                  <div class="form-group">
+                    <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="mobile" id="mobile" placeholder="09xxxxxxxxx" maxlength="11">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm" class="col-sm-2 control-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" name="password_confirmation" id="confirm" placeholder="Confirm Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <input type="submit" class="btn btn-success" value="SIGNUP">
+                      <button type="button" class="btn btn-success" data-dismiss="modal">CANCEL</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
